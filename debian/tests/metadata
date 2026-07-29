@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+desktop-file-validate /usr/share/applications/dev.minios.transume.desktop
+appstreamcli validate --no-net /usr/share/metainfo/dev.minios.transume.metainfo.xml
+xmllint --noout /usr/share/polkit-1/actions/dev.minios.transume.policy
+test -x /usr/bin/transume
+test -x /usr/lib/transume/transume-runner
+for size in 16 22 24 32 48 64 96 128; do
+    test -r "/usr/share/icons/hicolor/${size}x${size}/apps/transume.svg"
+done
+test -r /usr/share/icons/hicolor/symbolic/apps/transume-symbolic.svg
+test -r /usr/share/pixmaps/transume-logo.svg
+grep -qx 'Icon=transume' /usr/share/applications/dev.minios.transume.desktop
+PYTHONPATH=/usr/lib/transume python3 -c 'import transume'
+python3 -c 'import pathlib; assert pathlib.Path("/usr/lib/transume/transume-runner").read_text().startswith("#!/bin/sh")'

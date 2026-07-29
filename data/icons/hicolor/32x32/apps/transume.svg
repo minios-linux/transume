@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="linearGradient933"><stop stop-color="#39394b"/><stop offset="1" stop-color="#686887"/></linearGradient>
+    <linearGradient id="linearGradient935" xlink:href="#linearGradient933" x1="12.168998" y1="50.073002" x2="12.168998" y2=".11462299" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.6410257 0 0 .6410257 .61538445 .974359)"/>
+    <linearGradient id="linearGradient3924"><stop stop-color="#fff"/><stop offset=".06316455" stop-color="#fff" stop-opacity=".23529412"/><stop offset=".95056331" stop-color="#fff" stop-opacity=".15686275"/><stop offset="1" stop-color="#fff" stop-opacity=".39215687"/></linearGradient>
+    <linearGradient id="linearGradient2959" xlink:href="#linearGradient3924" x1="23.99999" y1="4.999989" x2="23.99999" y2="43" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.62162163 0 0 .62162163 1.0810836 2.0810874)"/>
+    <linearGradient id="shadowFade"><stop stop-color="#181818"/><stop offset="1" stop-color="#181818" stop-opacity="0"/></linearGradient>
+    <radialGradient id="shadowLeft" xlink:href="#shadowFade" cx="4.9929786" cy="43.5" r="2.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.003784 0 0 1.4 27.98813 -17.4)"/>
+    <radialGradient id="shadowRight" xlink:href="#shadowFade" cx="4.9929786" cy="43.5" r="2.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.003784 0 0 1.4 -20.01187 -104.4)"/>
+    <linearGradient id="shadowMiddle" x1="25.058096" y1="47.027729" x2="25.058096" y2="39.999443" gradientUnits="userSpaceOnUse"><stop stop-color="#181818" stop-opacity="0"/><stop offset=".5" stop-color="#181818"/><stop offset="1" stop-color="#181818" stop-opacity="0"/></linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b7b7c8"/></linearGradient>
+    <symbol id="logo" viewBox="21.9225 37.1008 84.5537 59.5541"><path transform="matrix(1.0436534 0 0 1.0436534 -4.0291477 -12.903385)" d="m98.289621 72.880674-5.474212.891865C91.660546 68.091678 86.139175 64.69277 79.190574 66.917926 76.267508 48.097311 49.698226 52.310512 50.051836 69.934017 19.589572 64.905799 25.927605 119.23193 84.885367 83.599358l-4.971624-4.393088 25.087499-3.651805-9.595441 22.60169-3.164378-5.768868C22.534894 129.65324 8.980083 66.255855 45.267243 63.701627 49.585281 45.93047 76.585675 42.858698 83.665178 60.976996c7.194968-.200252 13.167553 3.637135 14.624443 11.903678z"/></symbol>
+  </defs>
+  <g transform="matrix(.7894751 0 0 .35714285 -2.9473755 13.964286)" opacity=".6"><rect x="38" y="40" width="5" height="7" fill="url(#shadowLeft)"/><rect x="-10" y="-47" width="5" height="7" transform="scale(-1)" fill="url(#shadowRight)"/><rect x="10" y="40" width="28" height="7" fill="url(#shadowMiddle)"/></g>
+  <rect id="rect5505-21" x="3.5" y="4.5" width="25" height="25" rx="2" ry="2" fill="url(#linearGradient935)" stroke="#434356" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".501961"/>
+  <rect id="rect6741" x="4.5" y="5.5" width="23" height="23" rx="1" ry="1" fill="none" stroke="url(#linearGradient2959)" stroke-width=".999996" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+  <use xlink:href="#logo" x="5.136" y="10.348" width="21.728" height="15.305" fill="#1c1c24" opacity=".32"/>
+  <use xlink:href="#logo" x="5.136" y="9.348" width="21.728" height="15.305" fill="url(#mark)" stroke="#373748" stroke-width="1" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+  <use xlink:href="#logo" x="5.136" y="9.348" width="21.728" height="15.305" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width=".4" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+</svg>

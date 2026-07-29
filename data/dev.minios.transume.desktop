@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Transume
+Comment=Back up, restore, and clone storage devices
+Exec=transume
+Icon=transume
+Terminal=false
+Categories=System;
+Keywords=backup;restore;clone;disk;image;Clonezilla;
+StartupNotify=true
+StartupWMClass=dev.minios.transume
+DBusActivatable=false

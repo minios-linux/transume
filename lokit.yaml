@@ -1,0 +1,13 @@
+# lokit configuration for transume
+#
+# yaml-language-server: $schema=https://raw.githubusercontent.com/minios-linux/lokit/master/lokit.schema.json
+
+source_lang: en
+languages: [de, es, fr, id, it, pt, pt-BR, ru]
+
+targets:
+  - name: transume
+    format: gettext
+    root: .
+    template: po/messages.pot
+    to: po/{lang}.po

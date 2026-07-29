@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+if [ -d "$ROOT/src/transume" ]; then
+    export PYTHONPATH="$ROOT/src"
+else
+    export PYTHONPATH=/usr/lib/transume
+fi
+exec /usr/bin/python3 -m transume.runner "$@"

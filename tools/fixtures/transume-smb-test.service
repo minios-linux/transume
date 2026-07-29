@@ -1,0 +1,7 @@
+[Unit]
+Description=Transume isolated SMB qualification server
+After=network.target
+
+[Service]
+Type=notify
+ExecStart=/usr/sbin/smbd --foreground --no-process-group --configfile=/etc/samba/transume-test.conf

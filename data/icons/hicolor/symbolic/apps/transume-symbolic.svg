@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   sodipodi:docname="transume-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="transume-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+      <rect width="16" height="16" fill="#ffffff"/>
+      <g transform="matrix(.118267 0 0 .118267 .40717 .08919)">
+        <path
+           transform="matrix(1.0436534 0 0 1.0436534 -4.0291477 -12.903385)"
+           fill="#000000"
+           d="m98.289621 72.880674-5.474212.891865C91.660546 68.091678 86.139175 64.69277 79.190574 66.917926 76.267508 48.097311 49.698226 52.310512 50.051836 69.934017 19.589572 64.905799 25.927605 119.23193 84.885367 83.599358l-4.971624-4.393088 25.087499-3.651805-9.595441 22.60169-3.164378-5.768868C22.534894 129.65324 8.980083 66.255855 45.267243 63.701627 49.585281 45.93047 76.585675 42.858698 83.665178 60.976996c7.194968-.200252 13.167553 3.637135 14.624443 11.903678z"/>
+      </g>
+    </mask>
+  </defs>
+  <path
+     id="rect5505-21"
+     d="M3 1C1.8920011 1 1 1.8920011 1 3v10c0 1.107999.8920011 2 2 2h10c1.107999 0 2-.892001 2-2V3c0-1.1079989-.892001-2-2-2Z"
+     fill="#555761"
+     mask="url(#transume-cutout)"/>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>dev.minios.transume</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Transume</name>
+  <summary>Back up, restore, and clone storage devices</summary>
+  <description>
+    <p>
+      Transume provides a graphical interface for Clonezilla backup,
+      restoration, direct cloning, image management, and verification workflows.
+    </p>
+    <p>
+      The name Transume comes from a historical English verb used for making an
+      official copy or extract of a document, and for attesting that a copy
+      matched its source. The application brings that idea to disks by
+      preserving a system's structure and contents in a form that can be
+      checked, restored, or cloned.
+    </p>
+    <p>
+      The graphical application remains unprivileged and requests authorization
+      only when a storage operation requires elevated privileges.
+    </p>
+    <p>
+      Local and network repositories, read-only image exploration, explicit
+      partition restore, and Clonezilla LVM2 images are supported.
+    </p>
+  </description>
+  <launchable type="desktop-id">dev.minios.transume.desktop</launchable>
+  <url type="homepage">https://minios.dev/</url>
+  <developer id="dev.minios">
+    <name>MiniOS Linux</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.0.0" date="2026-07-19"/>
+    <release version="0.1.0" date="2026-07-12"/>
+  </releases>
+</component>

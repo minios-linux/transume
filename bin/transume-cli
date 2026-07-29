@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""Development and installed launcher for declarative Transume automation."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+source = Path(__file__).resolve().parents[1] / "src"
+if (source / "transume").is_dir():
+    sys.path.insert(0, str(source))
+else:
+    sys.path.insert(0, "/usr/lib/transume")
+
+from transume.cli import main
+
+raise SystemExit(main())

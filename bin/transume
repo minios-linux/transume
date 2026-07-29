@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""Development and installed launcher for Transume."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+source = Path(__file__).resolve().parents[1] / "src"
+if (source / "transume").is_dir():
+    sys.path.insert(0, str(source))
+elif Path("/usr/lib/transume").is_dir():
+    sys.path.insert(0, "/usr/lib/transume")
+
+try:
+    from transume.application import main
+except ImportError as error:
+    print(f"transume: unable to load the application: {error}", file=sys.stderr)
+    raise SystemExit(1)
+
+raise SystemExit(main())

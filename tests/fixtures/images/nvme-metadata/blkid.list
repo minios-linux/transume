@@ -1,0 +1,1 @@
+/dev/nvme0n1p1: LABEL="root" PARTLABEL="Linux root" TYPE="ext4"

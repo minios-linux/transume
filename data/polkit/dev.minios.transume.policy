@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+  "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+  <vendor>MiniOS</vendor>
+  <vendor_url>https://minios.dev/</vendor_url>
+
+  <action id="dev.minios.transume.mount">
+    <description>Mount a repository or read-only image explorer for Transume</description>
+    <message>Authentication is required to mount Transume storage</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/transume/transume-runner</annotate>
+    <annotate key="org.freedesktop.policykit.exec.argv1">mount</annotate>
+  </action>
+
+  <action id="dev.minios.transume.run-read-only-check">
+    <description>Run a privileged read-only check for Transume</description>
+    <message>Authentication is required to inspect storage devices</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/transume/transume-runner</annotate>
+    <annotate key="org.freedesktop.policykit.exec.argv1">check</annotate>
+  </action>
+
+  <action id="dev.minios.transume.run-destructive-local-job">
+    <description>Run a destructive local storage job for Transume</description>
+    <message>Authentication is required to overwrite storage devices</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/transume/transume-runner</annotate>
+    <annotate key="org.freedesktop.policykit.exec.argv1">write</annotate>
+  </action>
+
+</policyconfig>

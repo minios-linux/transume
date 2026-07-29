@@ -1,0 +1,44 @@
+Source: transume
+Section: utils
+Priority: optional
+Maintainer: crims0n <crims0n@minios.dev>
+Build-Depends:
+ appstream,
+ debhelper-compat (= 13),
+ desktop-file-utils,
+ dh-python,
+ gettext,
+ libxml2-utils,
+ python3-all,
+ python3-pytest,
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+Homepage: https://minios.dev/
+
+Package: transume
+Architecture: all
+Breaks: zillaclone (<= 0.1.0)
+Replaces: zillaclone (<= 0.1.0)
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ clonezilla (>= 5.9.9-1),
+ acl,
+ ecryptfs-utils,
+ gir1.2-gtk-4.0 (>= 4.18),
+ libgtk-4-1 (>= 4.18),
+ lvm2,
+ pkexec,
+ polkitd,
+ cifs-utils,
+ nfs-common,
+ partclone (>= 0.3.36+repack-1),
+ partclone-nbd (>= 0.0.4-1),
+ nbdkit (>= 1.42.3-1),
+ nbd-client,
+ sshfs,
+ python3 (>= 3.13),
+ python3-gi,
+Description: GTK4 frontend for Clonezilla
+ Transume provides a graphical interface for Clonezilla backup, restore,
+ cloning, image management, verification, network storage, and LVM2 workflows.

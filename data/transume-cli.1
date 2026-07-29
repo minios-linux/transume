@@ -1,0 +1,46 @@
+.TH TRANSUME-CLI 1 "July 2026" "Transume 1.0.0" "User Commands"
+.SH NAME
+transume-cli \- declarative, safe Transume automation
+.SH SYNOPSIS
+.B transume-cli
+.I export|validate|dry-run|execute
+.I job.json
+.RB [ --resolve-selectors ]
+.RB [ --yes ]
+.SH DESCRIPTION
+Validates strict PublicJobSpec JSON without invoking a shell. Input is a regular,
+non-symlink file no larger than 1 MiB, or standard input specified as
+.BR - .
+JSON results are written only to standard output; diagnostics are written to
+standard error.
+.SH COMMANDS
+.TP
+.B export
+Normalizes a strict PublicJobSpec and writes it to standard output or
+.B --output
+using an atomic, mode 0600 file replacement.
+.TP
+.B validate
+Checks command construction, runtime binaries and capabilities, repository/image
+containment, and current device identities.
+.TP
+.B dry-run
+Runs the same privileged-runner protocol in dry-run mode.
+.TP
+.B execute
+Runs through PolicyKit and requires
+.BR --yes .
+Encrypted backup and restore jobs cannot be executed by this CLI because their
+secret must use the interactive UI secret channel.
+.SH SELECTORS
+With
+.BR --resolve-selectors ,
+source and destination entries may each be exactly one of
+.BR {"serial":"VALUE"} ,
+.BR {"wwn":"VALUE"} ,
+.BR {"by_id":"VALUE"} .
+The selector must resolve to exactly one current device, which is rebuilt into a
+fresh DeviceIdentity. Path-only destructive selectors are rejected.
+.SH EXIT STATUS
+0 success; 2 command-line usage error; 3 invalid input or failed validation; 4
+runner failure; 5 execute refused because --yes was not supplied.

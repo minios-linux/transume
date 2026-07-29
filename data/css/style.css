@@ -1,0 +1,365 @@
+/* Layout and Transume-specific presentation only. GTK themes own window,
+ * header bar, control, focus, selection, and suggested-action styling. */
+
+.brand-button { min-width: 128px; padding: 0 5px; }
+.brand-title { font-size: 16px; font-weight: 700; }
+.header-title { font-size: 15px; font-weight: 700; }
+
+.navigation-rail {
+  min-width: 155px;
+  padding: 18px 10px 14px;
+  border-right: 1px solid alpha(currentColor, 0.12);
+}
+
+.nav-button {
+  min-height: 40px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+.rail-utility { min-height: 40px; padding: 4px 12px; }
+.nav-button:hover { background: alpha(currentColor, 0.07); }
+.nav-button:checked {
+  color: #ffffff;
+  background: #1c71d8;
+}
+.nav-button:checked label,
+.nav-button:checked image { color: #ffffff; opacity: 1; }
+
+.navigation-rail separator { margin: 10px 4px; }
+.compact-navigation { min-width: 180px; padding: 5px; }
+.compact-nav-item {
+  min-height: 40px;
+  padding: 4px 10px;
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+.compact-nav-item:hover { background: alpha(currentColor, 0.07); }
+.compact-nav-item.is-active {
+  border-left-color: #1c71d8;
+  color: #ffffff;
+  background: #1c71d8;
+}
+.compact-nav-item.is-active label,
+.compact-nav-item.is-active image {
+  color: #ffffff;
+  opacity: 1;
+}
+.compact-nav-item.is-active label { font-weight: 700; }
+.nav-button:focus-visible,
+.compact-nav-item:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -3px;
+}
+.nav-button:disabled,
+.compact-nav-item:disabled { opacity: 0.5; }
+.page { padding: 20px 24px 16px; }
+.page-title { font-size: 24px; font-weight: 700; }
+.muted { opacity: 0.66; }
+.card-title { font-size: 16px; font-weight: 700; }
+.action-title { font-size: 19px; font-weight: 700; }
+
+.eyebrow,
+.setting-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  opacity: 0.66;
+}
+
+.step-number {
+  min-width: 23px;
+  min-height: 23px;
+  padding: 1px;
+  border: 1px solid alpha(currentColor, 0.35);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.action-card,
+.info-card,
+.route-card,
+.operation-card {
+  border: 1px solid alpha(currentColor, 0.16);
+  border-radius: 8px;
+}
+
+.action-card { min-width: 280px; min-height: 142px; padding: 19px; }
+.info-card { padding: 18px; }
+.editor-workspace { margin-top: 4px; }
+.route { min-height: 0; }
+
+.route-card,
+.operation-card {
+  min-width: 150px;
+  min-height: 300px;
+  padding: 14px;
+}
+
+.identity-row { margin-top: 10px; }
+.device-icon-frame,
+.operation-icon-frame {
+  min-width: 54px;
+  min-height: 54px;
+  border: 1px solid alpha(currentColor, 0.24);
+  border-radius: 999px;
+}
+.device-icon-frame { border-radius: 8px; }
+.device-icon-frame image,
+.operation-icon-frame image { margin: 12px; }
+.route-card > separator,
+.operation-card > separator { margin: 10px 0 4px; }
+.card-details { min-height: 100px; }
+
+.metric-row {
+  min-height: 38px;
+  border-bottom: 1px solid alpha(currentColor, 0.10);
+}
+.metric-row image { opacity: 0.66; }
+.metric-row label { font-size: 11px; }
+.metric-value { margin-left: 8px; }
+
+.status-badge {
+  padding: 3px 7px;
+  border: 1px solid alpha(currentColor, 0.35);
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+}
+.route-card.is-selected {
+  outline: 1px solid alpha(currentColor, 0.30);
+  outline-offset: -1px;
+}
+.health-label { font-size: 10px; opacity: 0.66; }
+.route-card button { min-height: 36px; }
+.card-action { margin-top: 10px; }
+.route-connector { min-width: 22px; min-height: 2px; }
+.route-arrow { opacity: 0.7; }
+
+.route-hint {
+  padding: 11px 13px;
+  border: 1px solid alpha(currentColor, 0.14);
+  border-radius: 6px;
+}
+
+.context-panel {
+  min-width: 0;
+  padding: 20px 14px 16px;
+  border-left: 1px solid alpha(currentColor, 0.12);
+}
+.context-title { font-size: 16px; font-weight: 700; }
+.context-panel separator { margin: 3px 0; }
+.context-panel dropdown,
+.context-panel button { min-height: 38px; }
+.advanced-row {
+  min-height: 52px;
+  margin-top: 2px;
+  padding: 8px 10px;
+  border: 1px solid alpha(currentColor, 0.14);
+  border-radius: 8px;
+  background: alpha(currentColor, 0.025);
+  box-shadow: none;
+}
+.advanced-row:hover {
+  border-color: alpha(currentColor, 0.24);
+  background: alpha(currentColor, 0.06);
+}
+.advanced-title { font-weight: 600; }
+.advanced-subtitle { font-size: 11px; }
+.styled-dropdown { min-height: 40px; }
+.dropdown-value {
+  min-height: 28px;
+  padding: 2px 8px;
+  font-size: 13px;
+}
+.dropdown-option {
+  min-height: 36px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+.storage-kind-dropdown { min-height: 42px; }
+popover listview { padding: 5px; }
+popover listview row {
+  margin: 1px 0;
+  border-radius: 6px;
+}
+popover listview row:selected {
+  color: #ffffff;
+  background: #1c71d8;
+}
+popover listview row:selected image,
+popover listview row:selected label { color: #ffffff; opacity: 1; }
+.setting-spin text { padding-left: 10px; padding-right: 8px; }
+.setting-value { font-weight: 600; opacity: 0.66; }
+
+.destructive-zone { border-color: alpha(#c01c28, 0.7); }
+.drop-active { outline: 2px solid currentColor; outline-offset: -2px; }
+
+.action-bar {
+  min-height: 56px;
+  padding: 8px 24px;
+  border-top: 1px solid alpha(currentColor, 0.12);
+}
+.action-bar button { min-height: 40px; padding: 0 20px; }
+.dialog-actions { margin-top: 2px; }
+.dialog-actions button { min-width: 96px; min-height: 38px; padding: 0 18px; }
+.dialog-title { font-size: 18px; font-weight: 700; }
+.dialog-icon {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 8px;
+  border-radius: 10px;
+  color: #3584e4;
+  background: alpha(#3584e4, 0.12);
+}
+.dialog-form {
+  padding: 14px;
+  border: 1px solid alpha(currentColor, 0.14);
+  border-radius: 8px;
+}
+.ready-status { opacity: 0.7; }
+.ready-status.is-ready { opacity: 1; }
+.ready-status.is-ready image,
+.success-text { color: #26a269; opacity: 1; }
+
+.danger-banner {
+  padding: 14px;
+  color: #c01c28;
+  border: 1px solid alpha(#c01c28, 0.65);
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.command-preview {
+  padding: 14px;
+  border: 1px solid alpha(currentColor, 0.12);
+  border-radius: 6px;
+  font-family: monospace;
+}
+.overlay-copy-button {
+  margin: 6px 18px 6px 6px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  opacity: 0.45;
+}
+.log-view:hover .overlay-copy-button,
+.command-view:hover .overlay-copy-button,
+.overlay-copy-button:focus-visible,
+.overlay-copy-button:focus { opacity: 1; }
+.log-dialog-icon {
+  padding: 8px;
+  border-radius: 10px;
+  color: #3584e4;
+  background: alpha(#3584e4, 0.12);
+}
+.log-dialog-view {
+  border: 1px solid alpha(currentColor, 0.16);
+  border-radius: 8px;
+  background: alpha(currentColor, 0.035);
+}
+.operation-log {
+  font-size: 12px;
+  background: transparent;
+}
+.warning-text { color: #9c6b00; font-weight: 600; }
+.empty-state { padding: 32px; opacity: 0.66; }
+.activity-empty { padding: 34px 20px; }
+.activity-empty image { opacity: 0.66; }
+.about-feature { padding: 12px 0; border-bottom: 1px solid alpha(currentColor, 0.10); }
+.about-feature:last-child { border-bottom: 0; padding-bottom: 0; }
+.about-badge {
+  padding: 3px 7px;
+  border: 1px solid alpha(currentColor, 0.28);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.about-badge.success { color: #1b8553; border-color: alpha(#1b8553, 0.55); }
+.about-badge.warning { color: #9c6b00; border-color: alpha(#9c6b00, 0.55); }
+.about-readiness { padding: 9px 0; border-bottom: 1px solid alpha(currentColor, 0.10); }
+.about-versions { margin-top: 4px; }
+.boxed-list { border: 1px solid alpha(currentColor, 0.14); border-radius: 8px; }
+.picker-row { padding: 12px; border-radius: 0; }
+.picker-row:hover { background: alpha(currentColor, 0.06); }
+.picker-row.is-selected {
+  background: alpha(#1c71d8, 0.14);
+  outline: 2px solid #1c71d8;
+  outline-offset: -2px;
+}
+.picker-row:disabled { opacity: 0.5; }
+.image-card { min-width: 0; }
+.image-card-compact { padding: 12px 14px; }
+.image-card-icon {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #1c71d8;
+  background: alpha(#1c71d8, 0.10);
+}
+.image-card-subtitle { font-size: 11px; }
+.image-size-value { font-size: 11px; font-weight: 600; }
+.image-size-bar { min-height: 7px; }
+.image-size-bar trough { min-height: 7px; border-radius: 999px; }
+.image-size-bar block { min-height: 7px; border-radius: 999px; }
+.image-topology-disk { font-weight: 700; }
+.image-chip {
+  min-height: 20px;
+  padding: 2px 7px;
+  border: 1px solid alpha(currentColor, 0.18);
+  border-radius: 999px;
+  font-size: 10px;
+}
+.image-chip-secure { color: #1b8553; border-color: alpha(#1b8553, 0.48); }
+.image-card-path { font-size: 11px; }
+.image-actions-menu { min-width: 220px; }
+.destructive-menu-item { color: #c01c28; }
+.destructive-menu-item image,
+.destructive-menu-item label { color: #c01c28; }
+.image-card-list { background: transparent; }
+.image-card-list > row { margin: 3px 0; background: transparent; }
+.image-picker-row { margin: 0; padding: 0; border-radius: 8px; }
+.image-picker-row > .image-card { border-color: alpha(currentColor, 0.18); }
+.image-picker-row:hover > .image-card { border-color: alpha(currentColor, 0.34); }
+.image-picker-row:selected { background: alpha(#1c71d8, 0.14); }
+.image-picker-row:selected > .image-card { border-color: #1c71d8; }
+.explorer-reason { font-size: 11px; opacity: 0.66; }
+.explorer-hint {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: alpha(currentColor, 0.045);
+}
+.explorer-hint image { opacity: 0.58; }
+.image-issues {
+  padding: 10px 12px;
+  color: #c01c28;
+  border-left: 3px solid alpha(#c01c28, 0.72);
+  background: alpha(#c01c28, 0.045);
+}
+.picker-icon { opacity: 0.78; }
+.picker-status { margin-left: 12px; opacity: 0.66; }
+.mapping-row { min-height: 52px; padding-top: 10px; padding-bottom: 10px; }
+.compact .navigation-rail { min-width: 74px; }
+.compact .page { padding: 18px; }
+.compact .compact-settings {
+  margin-top: 14px;
+  padding: 10px;
+  border: 1px solid alpha(currentColor, 0.14);
+  border-radius: 8px;
+}
+.compact .compact-settings scrolledwindow { min-width: 0; }
+.compact .context-panel { min-width: 0; border-left: 0; }
+.compact .route-card,
+.compact .operation-card { min-width: 0; min-height: 0; }
+.short .action-bar { min-height: 48px; padding-top: 5px; padding-bottom: 5px; }
+.short .action-bar button { min-height: 36px; }
+.short .page { padding-top: 14px; padding-bottom: 14px; }

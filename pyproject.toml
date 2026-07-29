@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=66"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transume"
+version = "1.0.0"
+description = "GTK4 frontend for Clonezilla"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "GPL-3.0-or-later"}
+authors = [{name = "crims0n", email = "crims0n@minios.dev"}]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

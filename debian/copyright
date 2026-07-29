@@ -1,0 +1,28 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Transume
+Source: https://minios.dev/
+
+Files: *
+Copyright: 2026 MiniOS Linux
+License: GPL-3+
+
+Files: data/dev.minios.transume.metainfo.xml
+Copyright: 2026 MiniOS Linux
+License: CC0-1.0
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+ .
+ On Debian systems, the complete text of the GNU General Public License version
+ 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: CC0-1.0
+ To the extent possible under law, the author has dedicated all copyright and
+ related and neighboring rights to this work to the public domain worldwide.
+ This work is distributed without any warranty.
+ .
+ A copy of the CC0 Public Domain Dedication is available at
+ https://creativecommons.org/publicdomain/zero/1.0/.

@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_build:
+	$(MAKE) i18n-compile
+
+override_dh_auto_test:
+	$(MAKE) check
+
+override_dh_auto_install:

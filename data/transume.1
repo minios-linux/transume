@@ -1,0 +1,27 @@
+.TH TRANSUME 1 "July 2026" "Transume 1.0.0" "User Commands"
+.SH NAME
+transume \- graphical interface for Clonezilla workflows
+.SH SYNOPSIS
+.B transume
+.SH DESCRIPTION
+.B Transume
+provides guided GTK4 workflows for disk and partition backup, restore, direct
+cloning, image verification, storage connections, and read-only image
+exploration on Debian 13 and MiniOS.
+.PP
+Local, removable, SMB, NFS, and SSH repositories are supported. LVM2 whole-disk
+backup and restore use Clonezilla's native PV, VG, and LV workflow. Partition
+restore preserves existing disk-wide partition and boot metadata.
+.PP
+The graphical application runs without root privileges. It requests PolicyKit
+authorization only when mounting storage or starting privileged work.
+.SH FILES
+.TP
+.I ~/.local/state/transume
+Per-user activity history, redacted logs, and image catalog state.
+.SH SEE ALSO
+.BR transume-cli (1),
+.BR clonezilla (1),
+.BR partclone (8)
+.SH AUTHORS
+crims0n <crims0n@minios.dev>.

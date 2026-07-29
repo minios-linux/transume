@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Build outputs
+build/
+dist/
+locale/
+
+# Debian package staging
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/transume/
+debian/*.debhelper
+debian/*.substvars
+*.buildinfo
+*.changes
+*.deb
+
+# Local artifacts
+backups/
+*.log
+*.tmp
+*~

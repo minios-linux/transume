@@ -1,0 +1,13 @@
+bin/transume usr/bin
+bin/transume-cli usr/bin
+bin/transume-runner usr/lib/transume
+src/transume usr/lib/transume
+locale usr/share
+data/css usr/share/transume
+data/dev.minios.transume.desktop usr/share/applications
+data/dev.minios.transume.metainfo.xml usr/share/metainfo
+data/icons/hicolor/* usr/share/icons/hicolor
+data/pixmaps/transume-logo.svg usr/share/pixmaps
+data/polkit/dev.minios.transume.policy usr/share/polkit-1/actions
+data/transume-cli.1 usr/share/man/man1
+data/transume.1 usr/share/man/man1
