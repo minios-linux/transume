@@ -10,21 +10,6 @@ def test_format_size():
     assert format_size(1024 ** 3) == "1.0 GiB"
 
 
-def test_application_model_migrates_pre_rename_state(monkeypatch, tmp_path):
-    monkeypatch.setenv("XDG_STATE_HOME", str(tmp_path))
-    legacy = tmp_path / "zillaclone"
-    legacy.mkdir()
-    (legacy / "activity.json").write_text(
-        json.dumps({"version": 2, "records": []}), encoding="utf-8"
-    )
-
-    model = ApplicationModel()
-
-    assert model.activity_path == tmp_path / "transume" / "activity.json"
-    assert model.activity_path.exists()
-    assert not legacy.exists()
-
-
 def test_image_discovery(tmp_path):
     complete = tmp_path / "workstation"
     complete.mkdir()

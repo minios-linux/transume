@@ -17,8 +17,6 @@ Homepage: https://minios.dev/
 
 Package: transume
 Architecture: all
-Breaks: zillaclone (<= 0.1.0)
-Replaces: zillaclone (<= 0.1.0)
 Depends:
  ${misc:Depends},
  ${python3:Depends},

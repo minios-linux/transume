@@ -88,17 +88,7 @@ class ApplicationModel:
                  activity_path: Path | None = None) -> None:
         self.repository: Path | None = None
         state_root = Path(os.environ.get("XDG_STATE_HOME", Path.home() / ".local" / "state"))
-        legacy_state = state_root / "zillaclone"
         state_dir = state_root / "transume"
-        if activity_path is None and catalog_path is None and not state_dir.exists():
-            try:
-                info = legacy_state.lstat()
-                if (stat.S_ISDIR(info.st_mode) and not stat.S_ISLNK(info.st_mode)
-                        and info.st_uid == os.getuid()):
-                    legacy_state.rename(state_dir)
-            except OSError:
-                pass
-        self._legacy_log_dir = legacy_state / "logs"
         self.activity_path = activity_path or state_dir / "activity.json"
         self.log_dir = self.activity_path.parent / "logs"
         self._activity: list[ActivityRecord] = self._load_activity()
@@ -383,10 +373,6 @@ class ApplicationModel:
                 if status not in {None, "ok", "failed", "cancelled"}:
                     raise ValueError("invalid activity status")
                 log_path = None if version == 1 else item["log_path"]
-                if log_path is not None:
-                    legacy_log = Path(log_path)
-                    if legacy_log.parent == self._legacy_log_dir:
-                        log_path = str(self.log_dir / legacy_log.name)
                 if log_path is not None and self._owned_log(log_path) is None:
                     raise ValueError("unsafe activity log path")
                 records.append(ActivityRecord(item["job_id"], item["operation"], datetime.fromisoformat(item["started_at"]), datetime.fromisoformat(item["finished_at"]) if item["finished_at"] else None, status, item["source_label"], item["destination_label"], item["detail"], item["progress_summary"], item["log_summary"], None if version == 1 else item["exit_code"], None if version == 1 else item["verification"], None if version == 1 else item["cleanup"], log_path, () if version == 1 else tuple(item["affected_labels"])))
