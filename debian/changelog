@@ -1,3 +1,12 @@
+transume (1.0.1) unstable; urgency=medium
+
+  * Fix installed translation catalog discovery so Transume follows the system
+    language instead of falling back to English when /usr/lib/locale exists.
+  * Make localization and caller-identity tests independent of generated source
+    files and the clean builder account UID.
+
+ -- crims0n <crims0n@minios.dev>  Wed, 02 Sep 2026 17:44:15 +0300
+
 transume (1.0.0) unstable; urgency=medium
 
   * Release Transume 1.0.0.
