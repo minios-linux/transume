@@ -7,6 +7,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -43,6 +44,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -75,6 +80,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -83,12 +89,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -99,6 +108,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -113,6 +123,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -125,6 +136,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -152,16 +168,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -186,7 +198,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -223,6 +237,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -232,9 +247,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -298,6 +315,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -316,6 +334,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -336,10 +355,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -393,9 +418,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -436,6 +463,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -469,6 +497,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -505,6 +534,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -537,6 +570,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -545,12 +579,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -561,6 +598,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -575,6 +613,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -587,6 +626,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -614,16 +658,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -648,7 +688,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -685,6 +727,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -694,9 +737,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -760,6 +805,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -778,6 +824,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -798,10 +845,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -855,9 +908,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -898,6 +953,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -931,6 +987,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -967,6 +1024,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -999,6 +1060,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -1007,12 +1069,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -1023,6 +1088,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -1037,6 +1103,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -1049,6 +1116,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -1076,16 +1148,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -1110,7 +1178,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -1147,6 +1217,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -1156,9 +1227,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -1222,6 +1295,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -1240,6 +1314,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -1260,10 +1335,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -1317,9 +1398,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -1360,6 +1443,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -1393,6 +1477,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -1429,6 +1514,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -1461,6 +1550,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -1469,12 +1559,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -1485,6 +1578,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -1499,6 +1593,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -1511,6 +1606,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -1538,16 +1638,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -1572,7 +1668,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -1609,6 +1707,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -1618,9 +1717,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -1684,6 +1785,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -1702,6 +1804,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -1722,10 +1825,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -1779,9 +1888,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -1822,6 +1933,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -1855,6 +1967,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -1891,6 +2004,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -1923,6 +2040,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -1931,12 +2049,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -1947,6 +2068,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -1961,6 +2083,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -1973,6 +2096,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -2000,16 +2128,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -2034,7 +2158,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -2071,6 +2197,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -2080,9 +2207,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -2146,6 +2275,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -2164,6 +2294,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -2184,10 +2315,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -2241,9 +2378,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -2284,6 +2423,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -2317,6 +2457,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -2353,6 +2494,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -2385,6 +2530,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -2393,12 +2539,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -2409,6 +2558,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -2423,6 +2573,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -2435,6 +2586,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -2462,16 +2618,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -2496,7 +2648,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -2533,6 +2687,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -2542,9 +2697,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -2608,6 +2765,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -2626,6 +2784,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -2646,10 +2805,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -2703,9 +2868,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -2746,6 +2913,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -2779,6 +2947,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -2815,6 +2984,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -2847,6 +3020,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -2855,12 +3029,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -2871,6 +3048,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -2885,6 +3063,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -2897,6 +3076,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -2924,16 +3108,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -2958,7 +3138,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -2995,6 +3177,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -3004,9 +3187,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -3070,6 +3255,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -3088,6 +3274,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -3108,10 +3295,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -3165,9 +3358,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -3208,6 +3403,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
@@ -3241,6 +3437,7 @@ checksums:
         '{detail}; storage cleanup failed: {error}': 76b60a24576499e4ef07a7d1b7e0c9b5
         '{elapsed}  ETA {minutes}:{seconds:02d}': d80514c01734466b11790d9743251a41
         '{error}{recovery}': 194df55a8f29025cd2b3e0604f33341b
+        '{filesystem}, {size} bytes': fe00145ea87be9552df0ad2190a3155b
         '{method} is unavailable': c21ca064a449d21d28b56dee4a8389bd
         '{name}  {model}  {size}  {partitions} partitions': e9cdb8e016bc24c88f1fdfd1c107028e
         '{name} ({detail})': c9001a80f94f4e5266dbbe1c6765e771
@@ -3277,6 +3474,10 @@ checksums:
         Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel.: 8c3dd1a92516b338c2ceac7f6615bd1e
         Approve: 6f7351657f795bc1357a53142b1184cc
         Approve SSH host key?: 83e26d99611aad3a219d16d0cce25f64
+        Authentication: c75f7811d70d17dbcd88e9d03752cbed
+        Authentication is required to inspect storage devices: b99f9ca9da9cf83f6757ea18047845b0
+        Authentication is required to mount Transume storage: 678ae4ed2a3b47ffe07a6bccdbfaf17c
+        Authentication is required to overwrite storage devices: a8375499c7d29cfaa58800fcab839126
         Automation: caea8340e2d186a540518d08602aa065
         Available: 78945de8de090e90045d299651a68a9b
         B: 9d5ed678fe57bcca610140957afab571
@@ -3309,6 +3510,7 @@ checksums:
         Checksums: 4ab72a69aa303ab33d610a6f6e594e68
         Choose: 961f2247a2070bedff9f9cd8d64e2650
         Choose {role}: d738f4c686cd3f20fd53d29eea23e868
+        Choose a connected storage location or connect another one.: ea8f89967bf7cd9265ecfd155e9c8dae
         Choose a drive: bbf0984e85030c38595c533a0d886868
         Choose a folder to inspect current image status.: 02d13d8b12a413cd815e2aca11c964df
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
@@ -3317,12 +3519,15 @@ checksums:
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
+        Choose destination for {partition}: ba0913afbea45301b5371929a25ce48b
+        Choose file: cbe55e77ffa67d13322eb1ce7d22f1ba
         Choose folder: 3ee7e7544e12dffe891d1ff00eb72b96
         Choose local storage folder: e07a1ed07a3e5e3f3fe3345763802aa2
         Choose one unique target for each source disk. Order is preserved.: 4ddac1b7d36b91c35d1e13e44d963352
         Choose partition: 8cf2be1e94472053ff8afa0896ba43be
         Choose restore image: ad49f26c2843d14f0a1d97ca9345a05f
         Choose source: 0436bbf9718a5b9885a7c4f4182a3951
+        Choose source partition: 187e8454902550dde2859a15d89f4638
         Choose storage folder: fcfd35482a5f374c109415118f0027aa
         Choose storage location: f5ee8ad962129ae22839c9c8d549f9ac
         Choose target: 88ebe70598013a367d4c046fcebab4bd
@@ -3333,6 +3538,7 @@ checksums:
         Clone a drive: 1a3207729c0af7bbe7d18dde10cf4954
         Clone plan: 187d80ffea35d47339ed836707455fda
         Clone storage: d7e42bc52cfd34aa77dcb09b528564f7
+        Clonezilla can map one selected image partition to one target partition.: 791a1d3df5f5d5824aafdfb0c90645a8
         Clonezilla image: d2371d8c26757f6f30c07c63aa06953f
         Clonezilla native eCryptfs workflow: db49efb5f3060d721b01cd7439ad8637
         Clonezilla version: be204e5337c611c1c9f8e7d788d7ff68
@@ -3347,6 +3553,7 @@ checksums:
         Confirm passphrase: ebdbceb08de4cd8cf0e21b85ae9f2fa1
         Confirm the route and consequences. Nothing has been changed yet.: bb03a01d2d7befee3e4e4bb66b945c13
         Connect: 49ab28040dfa07f53544970c6d147e1e
+        Connect another: a7cebdd4f735ecc46b39d495136b30b7
         Connect storage location: dd247daf3127f7ed1bf466b592659530
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
@@ -3359,6 +3566,11 @@ checksums:
         Copy operation log: 8815f3558898b0ad227040558ca4ac62
         Copy system information: 0e1f338fbd4cb219892df780b949ba1f
         Copy the complete operation log: e0e5d23de135e8a1ee840cb2c4608235
+        ? |-
+            Copyright (C) 2026 MiniOS Linux.
+            Powered by Clonezilla and Partclone.
+            Licensed under GNU GPL 3.0 or later.
+        : 57ce0b0efae638198b49fbc29808dfc2
         Core imaging: ddb23598279753643b826247bd88eefe
         'Core imaging: {status}': d3b606a9c260b2fe4be9f31ec7f8410c
         Could not explore image: 5e6243b91127ddaf88b7112d6591908d
@@ -3386,16 +3598,12 @@ checksums:
         'Destination: {destination}': 084e2b38cea52f07b7a7bbc762771cf2
         Destructive operation warning. All destination data will be overwritten.: 76f982de8488b5a3303ad73c1ba78291
         Deterministic cleanup: 42021d11c441f6a88086dc4391725535
-        ? |-
-            Copyright (C) 2026 MiniOS Linux.
-            Powered by Clonezilla and Partclone.
-            Licensed under GNU GPL 3.0 or later.
-        : 57ce0b0efae638198b49fbc29808dfc2
         Device protection: 2691e4c4409b9cbf3bc3cf31b381ab5e
         Direct: fd1dd0c603be8170f9eae0be9f2f6afb
         Direct I/O: 92b9531657a4ce6a31c623d889a2c55d
         Direct disk copy: abd2b99435c82f3c3b9035d2ef3d47bc
         Disabled: b9f5c797ebbf55adccdd8539a65a0241
+        Disconnect: 42ae25231906c83927831e0ef7c317ac
         Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only.: e2988a83585b58d00333ba0e656cd131
         Disk and partition backup, restore, clone, and verification: e566a6bc09943477a8cf7ff056f2d2e1
         Do nothing: cd88ce600576fcc630878b5e374835a5
@@ -3420,7 +3628,9 @@ checksums:
         FILESYSTEM CHECK: 1086cd6456a5556bf211c22b50704532
         Failed: d7c8c85bf79bbe1b7188497c32c3b0ca
         File list: 35e92553e351827f8f497b2ff9379eec
+        Filesystem unknown: adf467b3df620f75b694868dd9cdd909
         Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user.: dbc9e4f16782b908f333fa86a5894114
+        Forget: 7cb5f8b4a50c32d395c50b98f0ca2464
         Full disk backup: 70bdb51fcd47aa1b1c3ee3a143d3ad06
         Full disk image: eb5588a12b9f90e15123e67abc78dc8c
         Full disk restore: 2582c4df8dd3a2ffdd7d84745178dd61
@@ -3457,6 +3667,7 @@ checksums:
         Keyboard shortcuts: de334061ddee0a9008edd133af533c04
         KiB: e91c229f0261d9551794aed2069edab7
         LOCATION TYPE: b873f7230df382ec881c712bd203904a
+        'LVM: {groups} VG, {volumes} LV': 9ed8c72a68ff1542f50d6797bc348abf
         Least privilege: 55c2115cd143e2cb41f6235e5b0c2e6a
         Local folder: 94430e5dac56c4ddd6cae6a19cb1e68a
         Local image path: ac2e7ffbbc2735de654692592b7f7300
@@ -3466,9 +3677,11 @@ checksums:
         Map restore disks: d3f5054c09a97407e4c0845d97a03c74
         Metadata warnings: cc59319aaa79ec03a4eb555dd1495f2e
         MiB: e64cb82119c812c7a2fc72022abfa6f2
+        Mount a repository or read-only image explorer for Transume: 96704d4f62ef1447d1d2062b051e011d
         Navigation: 846495f9ceed11accf8879f555936a7d
         Navigation menu: 111d0bebb4a6c03ac1a6097503a23562
         Network storage: 47e1e558ab951c7d21a3180dbc5068a7
+        New SSH hosts are trusted on first use. Changed host keys are rejected.: a28b2d918905dce4f61c850c80425baf
         New image name: 53725f9c498fe5867e053ead064491de
         New operation: ba77f562fe51f2827cea18ccfd35b7a5
         "No": bafd7322c6e97d25b6299b5d6fe8920b
@@ -3532,6 +3745,7 @@ checksums:
         Preparing operation: 29e380123644fa339129ad7bb012de3b
         Preserve: 6d2a1af98f2cad1e5ec2dd0a75953919
         Private data: 51ce745f9634e240bd739b61f1dc5ed0
+        Private key: 6eb9040e470e8018db394832a528f56a
         Problems: 2d9d499f457f866cd4e692bee7369005
         Product information, runtime readiness, and safety guarantees.: ad17db130937ccf0b2c07533de74d8f3
         Project: 9e727fdd3aec8274f46685441900280d
@@ -3550,6 +3764,7 @@ checksums:
         Refresh: 63a6a88c066880c5ac42394a22803ca6
         Rename: 904a8304056d77e4547744781b7ceb50
         Rename image: cbb7f3f3abd80345e969501ffea7267a
+        Requested storage folder was not found.: 0281e5d6f7b840b71a3b9887fa056d58
         Requires a usable image and {capability}: ef711490386e29137f1ffac1bcd4dca4
         Rescue damaged sectors: f4979c18e760cf0fd5bd24f4681d83be
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
@@ -3570,10 +3785,16 @@ checksums:
         Review: 457dd55184faedb7885afd4009d70163
         Review {operation}: c40833606a8275d66a7662d0db8d42b7
         Review before start: 206fbac139970cb90b74d032efa2a1d0
+        Run a destructive local storage job for Transume: c4c72aad7f96a420982299c7451a3f95
+        Run a privileged read-only check for Transume: 94fccb1cf2ae3c6b8db0894e8e5b8564
         Running: 5bda814c4aedb126839228f1a3d92f09
         Runs unprivileged: 4eace5feb627724ca97ef50b684703b3
         SELECTED: c841881b7f65d9e69aa9c932ca4427c8
+        SMB password is required: c9a31dc007699df2597d63421822a282
+        SMB username is required: e19f3f822d197dd899cc2a332fd1dac0
         SMB, NFS, and SSH repositories: df927dd3f895da36c2a9162e1e308638
+        SSH agent: 6e68faa40f23dadd7765777fdcecdba2
+        SSH agent is unavailable: 3bfa9158a29a61f6b4fba28396b78834
         SSH host key was not approved: b14638a1b0e141aae4530f2b09f9a7db
         'SSH host-key scan failed: {detail}': 574f27aa5ef3ed26caacdb75db07a789
         SSH password is required: e5d918301dd0470125d16b6ae4e086e9
@@ -3627,9 +3848,11 @@ checksums:
         : 01ef21c956715eb6a9a377b44c1deca0
         Storage cleanup failed: 30b25610dceebf9e71b1975e2840629c
         Storage folder: ce70e9b9d7aed790a61c014c41fab330
+        Storage folder is not accessible.: 18c21f7ecc28f8d9fb958765eeb05fc1
         Storage format: 7685ebf85bb5549fe7e72841c016e12b
         Storage is in use: d7e2007da78ce7bd02a5c0bf977c77c9
         Storage location: 3841f7bd4e64aaa7d347cd96086a9586
+        Storage locations: 51475547b4d83f27be3e1e43524712ee
         Storage type: f0cb6783b152b19ceab16227ca3976a2
         Supported payloads: d0c4ef9b4781fa8bb33db570ecc66a02
         System readiness: eed0ff6c161d4ee8207ed11d5c02c041
@@ -3670,6 +3893,7 @@ checksums:
         Use letters, digits, dots, underscores, or hyphens. The image data will not be changed.: fa6ede1e6fd1d52a49077cf985e7449a
         Use mapping: b7613ad959e82a73abc5efebdde54177
         Use this image: 4f63a3f5e3fc96883b948239e313fd06
+        Use this storage: fdc609f635af29d4e79cd734698ece1e
         Username: f6039d44b29456b20f8f373155ae4973
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f

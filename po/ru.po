@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the transume package.
 msgid ""
 msgstr ""
-"Project-Id-Version: transume \n"
+"Project-Id-Version: transume 1.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-16 23:35+0300\n"
-"PO-Revision-Date: 2026-07-16 20:36+0000\n"
+"POT-Creation-Date: 2026-09-02 22:31+0300\n"
+"PO-Revision-Date: 2026-09-02 19:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -15,505 +15,500 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/transume/application.py:96
+#: src/transume/application.py:98
 #, python-brace-format
 msgid "Transume: capability discovery failed: {error}"
 msgstr "Transume: не удалось обнаружить возможности: {error}"
 
-#: src/transume/application.py:116
+#: src/transume/application.py:118
 #, python-brace-format
 msgid "Transume: could not load stylesheet: {error}"
 msgstr "Transume: не удалось загрузить таблицу стилей: {error}"
 
-#: src/transume/application.py:124
+#: src/transume/application.py:128
 msgid "A careful GTK frontend for Clonezilla workflows"
 msgstr "Аккуратный GTK-фронтенд для рабочих процессов Clonezilla"
 
-#: src/transume/application.py:134
+#: src/transume/application.py:136
 msgid "Transume settings"
 msgstr "Настройки Transume"
 
-#: src/transume/application.py:136
+#: src/transume/application.py:138
 msgid "Appearance follows the system GTK theme. Operation-specific settings are available in the right-hand panel."
 msgstr "Внешний вид соответствует системной теме GTK. Настройки для операций доступны в правой панели."
 
-#: src/transume/application.py:140 src/transume/application.py:146
-#: src/transume/ui/pages.py:1411 src/transume/ui/pages.py:2067
-#: src/transume/ui/window.py:187 src/transume/ui/window.py:288
-#: src/transume/ui/window.py:453 src/transume/ui/window.py:463
-#: src/transume/ui/window.py:501 src/transume/ui/window.py:610
-msgid "Close"
-msgstr "Закрыть"
-
-#: src/transume/application.py:145
+#: src/transume/application.py:146
 msgid "Keyboard shortcuts"
 msgstr "Горячие клавиши"
 
-#: src/transume/application.py:145
+#: src/transume/application.py:147
 msgid "Use Tab and Shift+Tab to move between controls. Press Ctrl+Q to quit."
 msgstr "Используйте Tab и Shift+Tab для перехода между элементами управления. Для выхода нажмите Ctrl+Q."
 
-#: src/transume/application.py:160
+#: src/transume/application.py:161
 #, python-brace-format
 msgid "transume: {error}"
 msgstr "transume: {error}"
 
-#: src/transume/ui/components.py:38
+#: src/transume/ui/components.py:39
 msgid "B"
 msgstr "Б"
 
-#: src/transume/ui/components.py:38
+#: src/transume/ui/components.py:39
 msgid "KiB"
 msgstr "КиБ"
 
-#: src/transume/ui/components.py:38
+#: src/transume/ui/components.py:39
 msgid "MiB"
 msgstr "МиБ"
 
-#: src/transume/ui/components.py:38
+#: src/transume/ui/components.py:39
 msgid "GiB"
 msgstr "ГиБ"
 
-#: src/transume/ui/components.py:38
+#: src/transume/ui/components.py:39
 msgid "TiB"
 msgstr "ТиБ"
 
-#: src/transume/ui/components.py:40 src/transume/ui/pages.py:1301
-#: src/transume/ui/pages.py:1450
+#: src/transume/ui/components.py:41
 #, python-brace-format
 msgid "{size:.0f} {unit}"
 msgstr "{size:.0f} {unit}"
 
-#: src/transume/ui/components.py:40 src/transume/ui/pages.py:1301
-#: src/transume/ui/pages.py:1450
+#: src/transume/ui/components.py:41
 #, python-brace-format
 msgid "{size:.1f} {unit}"
 msgstr "{size:.1f} {unit}"
 
-#: src/transume/ui/components.py:43
+#: src/transume/ui/components.py:44
 #, python-brace-format
 msgid "{size} B"
 msgstr "{size} Б"
 
-#: src/transume/ui/components.py:60 src/transume/ui/pages.py:123
-#: src/transume/ui/pages.py:506
+#: src/transume/ui/components.py:120 src/transume/ui/pages.py:1448
+#: src/transume/ui/pages.py:2122
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/transume/ui/components.py:174
+msgid "Full disk image"
+msgstr "Полный образ диска"
+
+#: src/transume/ui/components.py:175
+msgid "Partition image"
+msgstr "Образ раздела"
+
+#: src/transume/ui/components.py:176
+msgid "Unknown image type"
+msgstr "Неизвестный тип образа"
+
+#: src/transume/ui/components.py:198
+#, python-brace-format
+msgid "Passed on {date}"
+msgstr "Проверено {date}"
+
+#: src/transume/ui/components.py:199
+msgid "Not verified"
+msgstr "Не проверено"
+
+#: src/transume/ui/components.py:208 src/transume/ui/pages.py:1966
+#: src/transume/ui/pages.py:1969
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: src/transume/ui/components.py:210 src/transume/ui/components.py:219
+#: src/transume/ui/components.py:221
+msgid "Image data"
+msgstr "Данные образа"
+
+#: src/transume/ui/components.py:219 src/transume/ui/components.py:221
+msgid "Logical source size"
+msgstr "Логический размер источника"
+
+#: src/transume/ui/components.py:226 src/transume/ui/pages.py:363
+#: src/transume/ui/pages.py:402 src/transume/ui/pages.py:464
+msgid "Unavailable"
+msgstr "Недоступно"
+
+#: src/transume/ui/components.py:242
+msgid "None recorded"
+msgstr "Не записано"
+
+#: src/transume/ui/components.py:252
+msgid "uncompressed"
+msgstr "без сжатия"
+
+#: src/transume/ui/components.py:256
+#, python-brace-format
+msgid "LVM: {groups} VG, {volumes} LV"
+msgstr "LVM: {groups} ГГ, {volumes} ЛВ"
+
+#: src/transume/ui/components.py:264
+#, python-brace-format
+msgid "Yes ({parts} parts)"
+msgstr "Да ({parts} частей)"
+
+#: src/transume/ui/components.py:268
+msgid "Encrypted"
+msgstr "Зашифровано"
+
+#: src/transume/ui/components.py:268
+msgid "not encrypted"
+msgstr "не зашифровано"
+
+#: src/transume/ui/components.py:312 src/transume/ui/pages.py:142
+#: src/transume/ui/pages.py:208 src/transume/ui/pages.py:565
 msgid "Choose"
 msgstr "Выбрать"
 
-#: src/transume/ui/components.py:66
+#: src/transume/ui/components.py:318
 #, python-brace-format
 msgid "{role}: {prompt}"
 msgstr "{role}: {prompt}"
 
-#: src/transume/ui/components.py:104
+#: src/transume/ui/components.py:356
 msgid "Nothing selected"
 msgstr "Ничего не выбрано"
 
-#: src/transume/ui/components.py:127
+#: src/transume/ui/components.py:379
 msgid "SELECTED"
 msgstr "ВЫБРАНО"
 
-#: src/transume/ui/components.py:148
+#: src/transume/ui/components.py:400
 #, python-brace-format
 msgid "Choose {role}"
 msgstr "Выберите {role}"
 
-#: src/transume/ui/components.py:191
+#: src/transume/ui/components.py:443
 msgid "Change"
 msgstr "Изменить"
 
-#: src/transume/ui/components.py:197
+#: src/transume/ui/components.py:449
 #, python-brace-format
 msgid "Selected {title}. {detail}"
 msgstr "Выбрано: {title}. {detail}"
 
-#: src/transume/ui/components.py:199
+#: src/transume/ui/components.py:451
 #, python-brace-format
 msgid ". {metadata}"
 msgstr ". {metadata}"
 
-#: src/transume/ui/components.py:222
+#: src/transume/ui/components.py:474
 msgid "Return to operation"
 msgstr "Вернуться к операции"
 
-#: src/transume/ui/components.py:223
+#: src/transume/ui/components.py:475
 msgid "Go back"
 msgstr "Назад"
 
-#: src/transume/ui/components.py:231
+#: src/transume/ui/components.py:483
 msgid "Search model, label, serial, or path"
 msgstr "Поиск по модели, метке, серийному номеру или пути"
 
-#: src/transume/ui/components.py:232
+#: src/transume/ui/components.py:484
 #, python-brace-format
 msgid "Search {title}"
 msgstr "Поиск {title}"
 
-#: src/transume/ui/components.py:253
+#: src/transume/ui/components.py:505
 msgid "Unknown device"
 msgstr "Неизвестное устройство"
 
-#: src/transume/ui/components.py:291
+#: src/transume/ui/components.py:543
 #, python-brace-format
 msgid "Select {title}"
 msgstr "Выберите {title}"
 
-#: src/transume/ui/components.py:293
+#: src/transume/ui/components.py:545
 #, python-brace-format
 msgid "{title} unavailable: {status}"
 msgstr "{title} недоступно: {status}"
 
-#: src/transume/ui/pages.py:32 src/transume/ui/window.py:250
+#: src/transume/ui/pages.py:32
+msgid "SMB password is required"
+msgstr "Требуется пароль SMB"
+
+#: src/transume/ui/pages.py:34
+msgid "SMB username is required"
+msgstr "Требуется имя пользователя SMB"
+
+#: src/transume/ui/pages.py:44 src/transume/ui/window.py:257
 #, python-brace-format
 msgid "{method} is unavailable"
 msgstr "{method} недоступен"
 
-#: src/transume/ui/pages.py:37 tests/test_ui_compat.py:28
+#: src/transume/ui/pages.py:49 tests/test_ui_compat.py:30
 #, python-brace-format
 msgid "Could not load {method}: {error}"
 msgstr "Не удалось загрузить {method}: {error}"
 
-#: src/transume/ui/pages.py:59
+#: src/transume/ui/pages.py:71
 msgid "Choose storage location"
 msgstr "Выберите место хранения"
 
-#: src/transume/ui/pages.py:71
+#: src/transume/ui/pages.py:84
 msgid "Storage location"
 msgstr "Место хранения"
 
-#: src/transume/ui/pages.py:72
+#: src/transume/ui/pages.py:85
 msgid "Choose where Transume should read or store Clonezilla images."
 msgstr "Выберите, где Transume будет читать или сохранять образы Clonezilla."
 
-#: src/transume/ui/pages.py:76
+#: src/transume/ui/pages.py:89
 msgid "LOCATION TYPE"
 msgstr "ТИП РАСПОЛОЖЕНИЯ"
 
-#: src/transume/ui/pages.py:78
+#: src/transume/ui/pages.py:91
 msgid "Local folder"
 msgstr "Локальная папка"
 
-#: src/transume/ui/pages.py:79
+#: src/transume/ui/pages.py:95
 msgid "Storage type"
 msgstr "Тип хранилища"
 
-#: src/transume/ui/pages.py:93 src/transume/ui/pages.py:123
-#: src/transume/ui/pages.py:240 src/transume/ui/pages.py:264
-#: src/transume/ui/pages.py:1584 src/transume/ui/pages.py:1695
-#: src/transume/ui/pages.py:1718 src/transume/ui/pages.py:1876
-#: src/transume/ui/pages.py:1968 src/transume/ui/window.py:486
+#: src/transume/ui/pages.py:112 src/transume/ui/pages.py:142
+#: src/transume/ui/pages.py:208 src/transume/ui/pages.py:342
+#: src/transume/ui/pages.py:1116 src/transume/ui/pages.py:1586
+#: src/transume/ui/pages.py:1700 src/transume/ui/pages.py:1726
+#: src/transume/ui/pages.py:1887 src/transume/ui/pages.py:1984
+#: src/transume/ui/window.py:338 src/transume/ui/window.py:604
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/transume/ui/pages.py:96
+#: src/transume/ui/pages.py:115
 msgid "Connect"
 msgstr "Подключиться"
 
-#: src/transume/ui/pages.py:98
+#: src/transume/ui/pages.py:117
 msgid "Connect storage location"
 msgstr "Подключить место хранения"
 
-#: src/transume/ui/pages.py:114 src/transume/ui/pages.py:1423
+#: src/transume/ui/pages.py:133 src/transume/ui/pages.py:1460
 msgid "Choose folder"
 msgstr "Выбрать папку"
 
-#: src/transume/ui/pages.py:115
+#: src/transume/ui/pages.py:134
 msgid "Choose local storage folder"
 msgstr "Выберите локальную папку для хранения"
 
-#: src/transume/ui/pages.py:121
+#: src/transume/ui/pages.py:140
 msgid "Choose storage folder"
 msgstr "Выберите папку для хранения"
 
-#: src/transume/ui/pages.py:142 src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:161 src/transume/ui/pages.py:162
 msgid "Host"
 msgstr "Хост"
 
-#: src/transume/ui/pages.py:142
+#: src/transume/ui/pages.py:161
 msgid "Share"
 msgstr "Общий ресурс"
 
-#: src/transume/ui/pages.py:142
+#: src/transume/ui/pages.py:161
 msgid "Optional subfolder"
 msgstr "Необязательная подпапка"
 
-#: src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:162
 msgid "Domain (optional)"
 msgstr "Домен (необязательно)"
 
-#: src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:162
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:162 src/transume/ui/pages.py:175
+#: src/transume/ui/pages.py:183
 msgid "Password"
 msgstr "Пароль"
 
-#: src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:162
 msgid "Export path"
 msgstr "Путь для экспорта"
 
-#: src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:162
 msgid "Port (optional)"
 msgstr "Порт (необязательно)"
 
-#: src/transume/ui/pages.py:143
+#: src/transume/ui/pages.py:162
 msgid "Absolute remote folder"
 msgstr "Абсолютный путь к удалённой папке"
 
-#: src/transume/ui/pages.py:157
+#: src/transume/ui/pages.py:173
+msgid "Authentication"
+msgstr "Аутентификация"
+
+#: src/transume/ui/pages.py:175
+msgid "SSH agent"
+msgstr "SSH-агент"
+
+#: src/transume/ui/pages.py:175 src/transume/ui/pages.py:190
+msgid "Private key"
+msgstr "Приватный ключ"
+
+#: src/transume/ui/pages.py:192 src/transume/ui/pages.py:206
+#: src/transume/ui/pages.py:286
+msgid "Choose file"
+msgstr "Выбрать файл"
+
+#: src/transume/ui/pages.py:232
 msgid "SSH/SFTP is unavailable because sshfs is not installed."
 msgstr "SSH/SFTP недоступен, так как sshfs не установлен."
 
-#: src/transume/ui/pages.py:157
-msgid "A host-key fingerprint must be approved before your password is sent."
-msgstr "Перед отправкой пароля необходимо подтвердить отпечаток ключа хоста."
+#: src/transume/ui/pages.py:232
+msgid "New SSH hosts are trusted on first use. Changed host keys are rejected."
+msgstr "Новые SSH-хосты считаются доверенными при первом подключении. Изменённые ключи хоста отклоняются."
 
-#: src/transume/ui/pages.py:176
+#: src/transume/ui/pages.py:251
 msgid "Choose a local folder first"
 msgstr "Сначала выберите локальную папку"
 
-#: src/transume/ui/pages.py:191
+#: src/transume/ui/pages.py:270
 msgid "SSH/SFTP is unavailable because sshfs is not installed"
 msgstr "SSH/SFTP недоступен, так как sshfs не установлен"
 
-#: src/transume/ui/pages.py:199 src/transume/ui/pages.py:252
+#: src/transume/ui/pages.py:282
 msgid "SSH password is required"
 msgstr "Требуется пароль SSH"
 
-#: src/transume/ui/pages.py:205 src/transume/ui/pages.py:255
+#: src/transume/ui/pages.py:291
+msgid "SSH agent is unavailable"
+msgstr "SSH-агент недоступен"
+
+#: src/transume/ui/pages.py:298 src/transume/ui/pages.py:333
 msgid "Connecting..."
 msgstr "Подключение..."
 
-#: src/transume/ui/pages.py:208
+#: src/transume/ui/pages.py:301 src/transume/ui/pages.py:335
 msgid "Cancel connection"
 msgstr "Отменить подключение"
 
-#: src/transume/ui/pages.py:218
+#: src/transume/ui/pages.py:311
 msgid "Scanning SSH host key..."
 msgstr "Сканирование SSH-ключа хоста..."
 
-#: src/transume/ui/pages.py:230
+#: src/transume/ui/pages.py:326
 #, python-brace-format
 msgid "SSH host-key scan failed: {detail}"
 msgstr "Ошибка сканирования SSH-ключа хоста: {detail}"
 
-#: src/transume/ui/pages.py:235
-msgid "Approve SSH host key?"
-msgstr "Подтвердить SSH-ключ хоста?"
-
-#: src/transume/ui/pages.py:237
-#, python-brace-format
-msgid ""
-"Host: {host}\n"
-"Port: {port}\n"
-"Select the scanned key to approve."
-msgstr ""
-"Хост: {host}\n"
-"Порт: {port}\n"
-"Выберите просканированный ключ для подтверждения."
-
-#: src/transume/ui/pages.py:241
-msgid "Approve"
-msgstr "Подтвердить"
-
-#: src/transume/ui/pages.py:245
-msgid "SSH host key was not approved"
-msgstr "SSH-ключ хоста не был подтверждён"
-
-#: src/transume/ui/pages.py:265
+#: src/transume/ui/pages.py:343
 #, python-brace-format
 msgid "Connection failed: {detail}. Correct the details and retry."
 msgstr "Ошибка подключения: {detail}. Проверьте параметры и повторите попытку."
 
-#: src/transume/ui/pages.py:276
+#: src/transume/ui/pages.py:354
 msgid "About Transume"
 msgstr "О программе Transume"
 
-#: src/transume/ui/pages.py:277
-msgid "Product information, runtime readiness, and safety guarantees."
-msgstr "Информация о продукте, готовность среды и гарантии безопасности."
-
-#: src/transume/ui/pages.py:285 src/transume/ui/pages.py:324
-#: src/transume/ui/pages.py:400 src/transume/ui/pages.py:1356
-#: src/transume/ui/pages.py:1496
-msgid "Unavailable"
-msgstr "Недоступно"
-
-#: src/transume/ui/pages.py:324
+#: src/transume/ui/pages.py:402
 msgid "Ready"
 msgstr "Готово"
 
-#: src/transume/ui/pages.py:338
+#: src/transume/ui/pages.py:416
 #, python-brace-format
 msgid "Transume {version}"
 msgstr "Transume {version}"
 
-#: src/transume/ui/pages.py:342
+#: src/transume/ui/pages.py:420
 msgid "The name Transume comes from a historical English verb used in the world of documents. It described making an official copy or extract, and attesting that a copy matched its source. Transume brings the same idea to disks: preserving a system's structure and contents so they can be checked, restored, or reproduced on another drive."
 msgstr "Название Transume происходит от исторического английского глагола, использовавшегося в сфере документов. Оно означало создание официальной копии или выписки и подтверждение соответствия копии оригиналу. Transume переносит эту идею на диски: сохраняет структуру и содержимое системы, чтобы их можно было проверить, восстановить или воспроизвести на другом носителе."
 
-#: src/transume/ui/pages.py:351
-msgid "Debian 13 qualified"
-msgstr "Совместимо с Debian 13"
-
-#: src/transume/ui/pages.py:352
-msgid "Runs unprivileged"
-msgstr "Работает без привилегий"
-
-#: src/transume/ui/pages.py:365
+#: src/transume/ui/pages.py:438
 msgid "Capabilities"
 msgstr "Возможности"
 
-#: src/transume/ui/pages.py:367
+#: src/transume/ui/pages.py:440
 msgid "Create images"
 msgstr "Создание образов"
 
-#: src/transume/ui/pages.py:367
+#: src/transume/ui/pages.py:440
 msgid "Back up complete disks or selected partitions, with verification and optional native encryption."
 msgstr "Резервное копирование целых дисков или выбранных разделов с проверкой и опциональным шифрованием."
 
-#: src/transume/ui/pages.py:368
+#: src/transume/ui/pages.py:441
 msgid "Restore images"
 msgstr "Восстановление образов"
 
-#: src/transume/ui/pages.py:368
+#: src/transume/ui/pages.py:441
 msgid "Restore supported full-disk and partition images with explicit destination warnings."
 msgstr "Восстановление поддерживаемых образов дисков и разделов с явными предупреждениями о назначении."
 
-#: src/transume/ui/pages.py:369
+#: src/transume/ui/pages.py:442
 msgid "Clone storage"
 msgstr "Клонирование хранилища"
 
-#: src/transume/ui/pages.py:369
+#: src/transume/ui/pages.py:442
 msgid "Copy a disk or partition directly to an equal or larger local destination."
 msgstr "Копируйте диск или раздел напрямую на локальный диск равного или большего размера."
 
-#: src/transume/ui/pages.py:370
+#: src/transume/ui/pages.py:443
 msgid "Manage images"
 msgstr "Управление образами"
 
-#: src/transume/ui/pages.py:370
+#: src/transume/ui/pages.py:443
 msgid "Discover, inspect, verify, rename, delete, and explore supported Partclone images read-only."
 msgstr "Обнаруживайте, просматривайте, проверяйте, переименовывайте, удаляйте и исследуйте поддерживаемые образы Partclone только для чтения."
 
-#: src/transume/ui/pages.py:371
-msgid "Use different storage"
-msgstr "Использовать другое хранилище"
-
-#: src/transume/ui/pages.py:371
-msgid "Work with local, removable, SMB, NFS, and SSH storage locations."
-msgstr "Работайте с локальными, съемными, SMB, NFS и SSH хранилищами."
-
-#: src/transume/ui/pages.py:377
-msgid "Safety by design"
-msgstr "Безопасность по умолчанию"
-
-#: src/transume/ui/pages.py:379
-msgid "Least privilege"
-msgstr "Минимальные привилегии"
-
-#: src/transume/ui/pages.py:379
-msgid "The interface runs without root and requests PolicyKit authorization only for privileged work."
-msgstr "Интерфейс работает без root и запрашивает авторизацию PolicyKit только для операций, требующих повышенных прав."
-
-#: src/transume/ui/pages.py:380
-msgid "Device protection"
-msgstr "Защита устройств"
-
-#: src/transume/ui/pages.py:380
-msgid "Stable identities, mount state, relationships, target size, and repository capacity are rechecked before execution."
-msgstr "Перед выполнением повторно проверяются идентификаторы устройств, состояние монтирования, связи, целевой размер и емкость репозитория."
-
-#: src/transume/ui/pages.py:381
-msgid "Private data"
-msgstr "Конфиденциальные данные"
-
-#: src/transume/ui/pages.py:381
-msgid "Credentials and passphrases are never stored in plans, command previews, activity history, or logs."
-msgstr "Учетные данные и пароли никогда не сохраняются в планах, предпросмотрах команд, истории действий или логах."
-
-#: src/transume/ui/pages.py:382
-msgid "Deterministic cleanup"
-msgstr "Детерминированная очистка"
-
-#: src/transume/ui/pages.py:382
-msgid "Owned mounts, locks, process groups, temporary secrets, and Image Explorer NBD sessions have explicit cleanup."
-msgstr "Монтирования, блокировки, группы процессов, временные секреты и сессии Image Explorer NBD явно очищаются."
-
-#: src/transume/ui/pages.py:387
-msgid "System readiness"
-msgstr "Готовность системы"
-
-#: src/transume/ui/pages.py:392
-msgid "Core imaging"
-msgstr "Базовые функции создания образов"
-
-#: src/transume/ui/pages.py:392
-msgid "Disk and partition backup, restore, clone, and verification"
-msgstr "Резервное копирование, восстановление, клонирование и проверка дисков и разделов"
-
-#: src/transume/ui/pages.py:393
-msgid "Encrypted backup"
-msgstr "Шифрованное резервное копирование"
-
-#: src/transume/ui/pages.py:393
-msgid "Clonezilla native eCryptfs workflow"
-msgstr "Нативный рабочий процесс Clonezilla с eCryptfs"
-
-#: src/transume/ui/pages.py:394
-msgid "Network storage"
-msgstr "Сетевое хранилище"
-
-#: src/transume/ui/pages.py:394
-msgid "SMB, NFS, and SSH repositories"
-msgstr "SMB, NFS и SSH репозитории"
-
-#: src/transume/ui/pages.py:395
+#: src/transume/ui/pages.py:444 src/transume/ui/pages.py:459
 msgid "Image Explorer"
 msgstr "Image Explorer"
 
-#: src/transume/ui/pages.py:395
+#: src/transume/ui/pages.py:444 src/transume/ui/pages.py:459
 msgid "Read-only Partclone file access"
 msgstr "Доступ к файлам Partclone только для чтения"
 
-#: src/transume/ui/pages.py:400
+#: src/transume/ui/pages.py:445
+msgid "Use different storage"
+msgstr "Использовать другое хранилище"
+
+#: src/transume/ui/pages.py:445
+msgid "Work with local, removable, SMB, NFS, and SSH storage locations."
+msgstr "Работайте с локальными, съемными, SMB, NFS и SSH хранилищами."
+
+#: src/transume/ui/pages.py:451
+msgid "System readiness"
+msgstr "Готовность системы"
+
+#: src/transume/ui/pages.py:456
+msgid "Core imaging"
+msgstr "Базовые функции создания образов"
+
+#: src/transume/ui/pages.py:456
+msgid "Disk and partition backup, restore, clone, and verification"
+msgstr "Резервное копирование, восстановление, клонирование и проверка дисков и разделов"
+
+#: src/transume/ui/pages.py:457
+msgid "Encrypted backup"
+msgstr "Шифрованное резервное копирование"
+
+#: src/transume/ui/pages.py:457
+msgid "Clonezilla native eCryptfs workflow"
+msgstr "Нативный рабочий процесс Clonezilla с eCryptfs"
+
+#: src/transume/ui/pages.py:458
+msgid "Network storage"
+msgstr "Сетевое хранилище"
+
+#: src/transume/ui/pages.py:458
+msgid "SMB, NFS, and SSH repositories"
+msgstr "SMB, NFS и SSH репозитории"
+
+#: src/transume/ui/pages.py:464
 msgid "Partclone"
 msgstr "Partclone"
 
-#: src/transume/ui/pages.py:400 src/transume/ui/pages.py:671
+#: src/transume/ui/pages.py:464 src/transume/ui/pages.py:734
 msgid "Available"
 msgstr "Доступно"
 
-#: src/transume/ui/pages.py:401
+#: src/transume/ui/pages.py:465
 msgid "Python"
 msgstr "Python"
 
-#: src/transume/ui/pages.py:410
-msgid "Image Explorer compatibility"
-msgstr "Совместимость с Image Explorer"
-
-#: src/transume/ui/pages.py:411
-msgid "Supported payloads"
-msgstr "Поддерживаемые типы данных"
-
-#: src/transume/ui/pages.py:411
-msgid "Uncompressed, gzip, and xz Partclone images, including split payloads."
-msgstr "Некомпрессированные, gzip и xz образы Partclone, включая разделённые данные."
-
-#: src/transume/ui/pages.py:412
-msgid "Read-only access"
-msgstr "Доступ только для чтения"
-
-#: src/transume/ui/pages.py:412
-msgid "Filesystems are mounted with ro, nosuid, nodev, and noexec; access is limited to the requesting user."
-msgstr "Файловые системы монтируются с опциями ro, nosuid, nodev и noexec; доступ ограничен только запрашивающим пользователем."
-
-#: src/transume/ui/pages.py:415
+#: src/transume/ui/pages.py:473
 msgid "Project"
 msgstr "Проект"
 
-#: src/transume/ui/pages.py:417
+#: src/transume/ui/pages.py:475
 msgid ""
 "Copyright (C) 2026 MiniOS Linux.\n"
 "Powered by Clonezilla and Partclone.\n"
@@ -523,882 +518,717 @@ msgstr ""
 "Работает на базе Clonezilla и Partclone.\n"
 "Лицензия GNU GPL 3.0 или новее."
 
-#: src/transume/ui/pages.py:423
+#: src/transume/ui/pages.py:481
 msgid "Project website"
 msgstr "Сайт проекта"
 
-#: src/transume/ui/pages.py:471
+#: src/transume/ui/pages.py:530
 msgid "Create a backup"
 msgstr "Создать резервную копию"
 
-#: src/transume/ui/pages.py:472
+#: src/transume/ui/pages.py:531
 msgid "Restore from an image"
 msgstr "Восстановить из образа"
 
-#: src/transume/ui/pages.py:473
+#: src/transume/ui/pages.py:532
 msgid "Clone a drive"
 msgstr "Клонировать диск"
 
-#: src/transume/ui/pages.py:476
+#: src/transume/ui/pages.py:535
 msgid "Select source, operation and destination to create a disk image."
 msgstr "Выберите источник, операцию и место назначения для создания образа диска."
 
-#: src/transume/ui/pages.py:477
+#: src/transume/ui/pages.py:536
 msgid "Select an image and inspect the drive that will be overwritten."
 msgstr "Выберите образ и проверьте диск, который будет перезаписан."
 
-#: src/transume/ui/pages.py:478
+#: src/transume/ui/pages.py:537
 msgid "Select source and destination for a direct disk copy."
 msgstr "Выберите источник и назначение для прямого копирования диска."
 
-#: src/transume/ui/pages.py:491
+#: src/transume/ui/pages.py:550
 msgid "Image"
 msgstr "Образ"
 
-#: src/transume/ui/pages.py:491
+#: src/transume/ui/pages.py:550
 msgid "Source"
 msgstr "Источник"
 
-#: src/transume/ui/pages.py:492
+#: src/transume/ui/pages.py:551
 msgid "No image selected"
 msgstr "Образ не выбран"
 
-#: src/transume/ui/pages.py:492 src/transume/ui/pages.py:613
+#: src/transume/ui/pages.py:551 src/transume/ui/pages.py:672
 msgid "Choose a drive"
 msgstr "Выберите диск"
 
-#: src/transume/ui/pages.py:499
+#: src/transume/ui/pages.py:558
 msgid "Choose source"
 msgstr "Выберите источник"
 
-#: src/transume/ui/pages.py:506
+#: src/transume/ui/pages.py:565
 msgid "Browse images"
 msgstr "Просмотреть образы"
 
-#: src/transume/ui/pages.py:519
+#: src/transume/ui/pages.py:578
 #, python-brace-format
 msgid "{operation} data flow direction"
 msgstr "Направление потока данных: {operation}"
 
-#: src/transume/ui/pages.py:528
+#: src/transume/ui/pages.py:587
 msgid "PLAN"
 msgstr "ПЛАН"
 
-#: src/transume/ui/pages.py:546
+#: src/transume/ui/pages.py:605
 msgid "Backup plan"
 msgstr "План резервного копирования"
 
-#: src/transume/ui/pages.py:547
+#: src/transume/ui/pages.py:606
 msgid "Restore plan"
 msgstr "План восстановления"
 
-#: src/transume/ui/pages.py:547
+#: src/transume/ui/pages.py:606
 msgid "Clone plan"
 msgstr "План клонирования"
 
-#: src/transume/ui/pages.py:553
+#: src/transume/ui/pages.py:612
 msgid "Full disk backup"
 msgstr "Полное резервное копирование диска"
 
-#: src/transume/ui/pages.py:554
+#: src/transume/ui/pages.py:613
 msgid "Full disk restore"
 msgstr "Полное восстановление диска"
 
-#: src/transume/ui/pages.py:555
+#: src/transume/ui/pages.py:614
 msgid "Direct disk copy"
 msgstr "Прямое копирование диска"
 
-#: src/transume/ui/pages.py:584
+#: src/transume/ui/pages.py:643
 msgid "Estimated data"
 msgstr "Оценочный объём данных"
 
-#: src/transume/ui/pages.py:585 src/transume/ui/pages.py:1360
+#: src/transume/ui/pages.py:644
 msgid "Compression"
 msgstr "Сжатие"
 
-#: src/transume/ui/pages.py:585 src/transume/ui/pages.py:743
+#: src/transume/ui/pages.py:644 src/transume/ui/pages.py:785
 msgid "Zstandard"
 msgstr "Zstandard"
 
-#: src/transume/ui/pages.py:586 src/transume/ui/pages.py:812
-#: src/transume/ui/pages.py:1510
+#: src/transume/ui/pages.py:645 src/transume/ui/pages.py:850
 msgid "Verification"
 msgstr "Проверка"
 
-#: src/transume/ui/pages.py:586 src/transume/ui/pages.py:594
-#: src/transume/ui/pages.py:601 src/transume/ui/pages.py:812
-#: src/transume/ui/pages.py:820 src/transume/ui/pages.py:841
-#: src/transume/ui/pages.py:871 src/transume/ui/pages.py:872
+#: src/transume/ui/pages.py:645 src/transume/ui/pages.py:653
+#: src/transume/ui/pages.py:660 src/transume/ui/pages.py:850
+#: src/transume/ui/pages.py:858 src/transume/ui/pages.py:879
+#: src/transume/ui/pages.py:908 src/transume/ui/pages.py:909
 msgid "Enabled"
 msgstr "Включено"
 
-#: src/transume/ui/pages.py:587 src/transume/ui/pages.py:600
-#: src/transume/ui/pages.py:820 src/transume/ui/pages.py:872
+#: src/transume/ui/pages.py:646 src/transume/ui/pages.py:659
+#: src/transume/ui/pages.py:858 src/transume/ui/pages.py:909
 msgid "Rescue mode"
 msgstr "Режим восстановления"
 
-#: src/transume/ui/pages.py:587 src/transume/ui/pages.py:592
-#: src/transume/ui/pages.py:599 src/transume/ui/pages.py:600
-#: src/transume/ui/pages.py:812 src/transume/ui/pages.py:820
-#: src/transume/ui/pages.py:841 src/transume/ui/pages.py:884
+#: src/transume/ui/pages.py:646 src/transume/ui/pages.py:651
+#: src/transume/ui/pages.py:658 src/transume/ui/pages.py:659
+#: src/transume/ui/pages.py:850 src/transume/ui/pages.py:858
+#: src/transume/ui/pages.py:879 src/transume/ui/pages.py:921
 msgid "Disabled"
 msgstr "Отключено"
 
-#: src/transume/ui/pages.py:590 src/transume/ui/pages.py:833
+#: src/transume/ui/pages.py:649 src/transume/ui/pages.py:871
 msgid "Image check"
 msgstr "Проверка образа"
 
-#: src/transume/ui/pages.py:590 src/transume/ui/pages.py:833
+#: src/transume/ui/pages.py:649 src/transume/ui/pages.py:871
 msgid "Before restore"
 msgstr "Перед восстановлением"
 
-#: src/transume/ui/pages.py:591 src/transume/ui/pages.py:598
-#: src/transume/ui/pages.py:875
+#: src/transume/ui/pages.py:650 src/transume/ui/pages.py:657
+#: src/transume/ui/pages.py:912
 msgid "Partition layout"
 msgstr "Разметка разделов"
 
-#: src/transume/ui/pages.py:591 src/transume/ui/pages.py:598
+#: src/transume/ui/pages.py:650 src/transume/ui/pages.py:657
 msgid "Preserve"
 msgstr "Сохранить"
 
-#: src/transume/ui/pages.py:592 src/transume/ui/pages.py:599
-#: src/transume/ui/pages.py:841 src/transume/ui/pages.py:871
+#: src/transume/ui/pages.py:651 src/transume/ui/pages.py:658
+#: src/transume/ui/pages.py:879 src/transume/ui/pages.py:908
 msgid "Resize"
 msgstr "Изменить размер"
 
-#: src/transume/ui/pages.py:593 src/transume/ui/pages.py:849
+#: src/transume/ui/pages.py:652 src/transume/ui/pages.py:887
 msgid "Boot loader"
 msgstr "Загрузчик"
 
-#: src/transume/ui/pages.py:593 src/transume/ui/pages.py:849
-#: src/transume/ui/window.py:29
+#: src/transume/ui/pages.py:652 src/transume/ui/pages.py:887
+#: src/transume/ui/pages.py:1518 src/transume/ui/window.py:31
 msgid "Restore"
 msgstr "Восстановить"
 
-#: src/transume/ui/pages.py:594 src/transume/ui/pages.py:601
+#: src/transume/ui/pages.py:653 src/transume/ui/pages.py:660
 msgid "Size check"
 msgstr "Проверка размера"
 
-#: src/transume/ui/pages.py:597 src/transume/ui/pages.py:873
-#: src/transume/ui/pages.py:874
+#: src/transume/ui/pages.py:656 src/transume/ui/pages.py:910
+#: src/transume/ui/pages.py:911
 msgid "Copy mode"
 msgstr "Режим копирования"
 
-#: src/transume/ui/pages.py:597 src/transume/ui/pages.py:884
+#: src/transume/ui/pages.py:656 src/transume/ui/pages.py:921
 msgid "Direct"
 msgstr "Прямой"
 
-#: src/transume/ui/pages.py:612
+#: src/transume/ui/pages.py:671
 msgid "Destination"
 msgstr "Назначение"
 
-#: src/transume/ui/pages.py:613
+#: src/transume/ui/pages.py:672
 msgid "Choose an image folder"
 msgstr "Выберите папку с образом"
 
-#: src/transume/ui/pages.py:624
+#: src/transume/ui/pages.py:687
 msgid "Choose destination"
 msgstr "Выберите место назначения"
 
-#: src/transume/ui/pages.py:653
+#: src/transume/ui/pages.py:716
 msgid "Image name"
 msgstr "Имя образа"
 
-#: src/transume/ui/pages.py:655 src/transume/ui/pages.py:1690
+#: src/transume/ui/pages.py:718 src/transume/ui/pages.py:1695
 msgid "Safe image name"
 msgstr "Безопасное имя образа"
 
-#: src/transume/ui/pages.py:656
+#: src/transume/ui/pages.py:719
 msgid "Backup image name"
 msgstr "Имя резервного образа"
 
-#: src/transume/ui/pages.py:665
+#: src/transume/ui/pages.py:728
 msgid "Enter an image name."
 msgstr "Введите имя образа."
 
-#: src/transume/ui/pages.py:667
+#: src/transume/ui/pages.py:730
 msgid "Use letters, digits, dot, underscore, or hyphen only."
 msgstr "Используйте только буквы, цифры, точку, подчеркивание или дефис."
 
-#: src/transume/ui/pages.py:669
+#: src/transume/ui/pages.py:732
 msgid "An image with this name already exists."
 msgstr "Образ с таким именем уже существует."
 
-#: src/transume/ui/pages.py:681
+#: src/transume/ui/pages.py:744
 msgid "Source devices must be unmounted. System disks require a live session."
 msgstr "Исходные устройства должны быть отмонтированы. Для системных дисков требуется работа в live-сессии."
 
-#: src/transume/ui/pages.py:701 src/transume/ui/pages.py:709
+#: src/transume/ui/pages.py:764 src/transume/ui/pages.py:772
 #, python-brace-format
 msgid "{operation} settings"
 msgstr "Настройки {operation}"
 
-#: src/transume/ui/pages.py:743
+#: src/transume/ui/pages.py:785
 msgid "Gzip"
 msgstr "Gzip"
 
-#: src/transume/ui/pages.py:753
+#: src/transume/ui/pages.py:795
 msgid "COMPRESSION"
 msgstr "СЖАТИЕ"
 
-#: src/transume/ui/pages.py:754 src/transume/ui/pages.py:784
-#: src/transume/ui/pages.py:1365 src/transume/ui/pages.py:1366
+#: src/transume/ui/pages.py:796 src/transume/ui/pages.py:823
 msgid "None"
 msgstr "Нет"
 
-#: src/transume/ui/pages.py:757
+#: src/transume/ui/pages.py:798
 msgid "Compression level"
 msgstr "Уровень сжатия"
 
-#: src/transume/ui/pages.py:764
+#: src/transume/ui/pages.py:805
 msgid "BACKUP ENGINE"
 msgstr "ДВИЖОК РЕЗЕРВНОГО КОПИРОВАНИЯ"
 
-#: src/transume/ui/pages.py:772
+#: src/transume/ui/pages.py:812
 msgid "Only installed Clonezilla copy engines are shown."
 msgstr "Показаны только установленные движки копирования Clonezilla."
 
-#: src/transume/ui/pages.py:775
+#: src/transume/ui/pages.py:815
 msgid "FILESYSTEM CHECK"
 msgstr "ПРОВЕРКА ФАЙЛОВОЙ СИСТЕМЫ"
 
-#: src/transume/ui/pages.py:777 src/transume/ui/pages.py:849
+#: src/transume/ui/pages.py:817 src/transume/ui/pages.py:887
 msgid "Skip"
 msgstr "Пропустить"
 
-#: src/transume/ui/pages.py:777
+#: src/transume/ui/pages.py:817
 msgid "Check"
 msgstr "Проверить"
 
-#: src/transume/ui/pages.py:777
+#: src/transume/ui/pages.py:817
 msgid "Check and repair"
 msgstr "Проверить и исправить"
 
-#: src/transume/ui/pages.py:782
+#: src/transume/ui/pages.py:821
 msgid "CHECKSUM"
 msgstr "КОНТРОЛЬНАЯ СУММА"
 
-#: src/transume/ui/pages.py:784
+#: src/transume/ui/pages.py:823
 msgid "File list"
 msgstr "Список файлов"
 
-#: src/transume/ui/pages.py:791
+#: src/transume/ui/pages.py:829
 msgid "Split size in MiB. Zero uses Clonezilla automatic sizing."
 msgstr "Размер части в MiB. Ноль — автоматический размер Clonezilla."
 
-#: src/transume/ui/pages.py:794
+#: src/transume/ui/pages.py:832
 msgid "Split size (MiB, 0 = automatic)"
 msgstr "Размер части (MiB, 0 = автоматически)"
 
-#: src/transume/ui/pages.py:798 src/transume/ui/window.py:476
+#: src/transume/ui/pages.py:836 src/transume/ui/window.py:587
 msgid "Encrypt backup"
 msgstr "Зашифровать резервную копию"
 
-#: src/transume/ui/pages.py:799
+#: src/transume/ui/pages.py:837
 msgid "A passphrase is requested only after Review and is never included in the plan or command preview."
 msgstr "Пароль запрашивается только после проверки и никогда не включается в план или предпросмотр команды."
 
-#: src/transume/ui/pages.py:804
+#: src/transume/ui/pages.py:842
 msgid "Encryption unavailable: native eCryptfs tools are not installed."
 msgstr "Шифрование недоступно: не установлены родные инструменты eCryptfs."
 
-#: src/transume/ui/pages.py:807
+#: src/transume/ui/pages.py:845
 msgid "Verify after completion"
 msgstr "Проверить после завершения"
 
-#: src/transume/ui/pages.py:816 src/transume/ui/pages.py:872
+#: src/transume/ui/pages.py:854 src/transume/ui/pages.py:909
 msgid "Rescue damaged sectors"
 msgstr "Восстановить повреждённые сектора"
 
-#: src/transume/ui/pages.py:827
+#: src/transume/ui/pages.py:865
 msgid "RESTORE"
 msgstr "ВОССТАНОВЛЕНИЕ"
 
-#: src/transume/ui/pages.py:828
+#: src/transume/ui/pages.py:866
 msgid "Check image before restore"
 msgstr "Проверить образ перед восстановлением"
 
-#: src/transume/ui/pages.py:833
+#: src/transume/ui/pages.py:871
 msgid "Skipped"
 msgstr "Пропущено"
 
-#: src/transume/ui/pages.py:836
+#: src/transume/ui/pages.py:874
 msgid "RESTORE LAYOUT"
 msgstr "ВОССТАНОВИТЬ РАСПОЛОЖЕНИЕ"
 
-#: src/transume/ui/pages.py:837 src/transume/ui/pages.py:871
+#: src/transume/ui/pages.py:875 src/transume/ui/pages.py:908
 msgid "Resize filesystem to fit"
 msgstr "Изменить размер файловой системы по размеру"
 
-#: src/transume/ui/pages.py:844
+#: src/transume/ui/pages.py:882
 msgid "Restore boot loader"
 msgstr "Восстановить загрузчик"
 
-#: src/transume/ui/pages.py:852
+#: src/transume/ui/pages.py:890
 msgid "Restore EBR"
 msgstr "Восстановить EBR"
 
-#: src/transume/ui/pages.py:852
+#: src/transume/ui/pages.py:890
 msgid "Restore hidden data"
 msgstr "Восстановить скрытые данные"
 
-#: src/transume/ui/pages.py:853
+#: src/transume/ui/pages.py:891
 msgid "Update EFI boot entries"
 msgstr "Обновить EFI-загрузочные записи"
 
-#: src/transume/ui/pages.py:859
+#: src/transume/ui/pages.py:897
 msgid "Original partition table"
 msgstr "Исходная таблица разделов"
 
-#: src/transume/ui/pages.py:859
+#: src/transume/ui/pages.py:897
 msgid "Proportional"
 msgstr "Пропорционально"
 
-#: src/transume/ui/pages.py:859
+#: src/transume/ui/pages.py:897
 msgid "Use existing table"
 msgstr "Использовать существующую таблицу"
 
-#: src/transume/ui/pages.py:862
+#: src/transume/ui/pages.py:899
 msgid "Existing layout is unavailable for old images without partition metadata."
 msgstr "Существующая схема недоступна для старых образов без метаданных разделов."
 
-#: src/transume/ui/pages.py:869
+#: src/transume/ui/pages.py:906
 msgid "CLONE METHOD"
 msgstr "МЕТОД КЛОНИРОВАНИЯ"
 
-#: src/transume/ui/pages.py:873
+#: src/transume/ui/pages.py:910
 msgid "Sector-by-sector copy"
 msgstr "Поблочное копирование"
 
-#: src/transume/ui/pages.py:873
+#: src/transume/ui/pages.py:910
 msgid "Sector-by-sector"
 msgstr "Поблочно"
 
-#: src/transume/ui/pages.py:874
+#: src/transume/ui/pages.py:911
 msgid "Use direct I/O"
 msgstr "Использовать прямой I/O"
 
-#: src/transume/ui/pages.py:874
+#: src/transume/ui/pages.py:911
 msgid "Direct I/O"
 msgstr "Прямой I/O"
 
-#: src/transume/ui/pages.py:875
+#: src/transume/ui/pages.py:912
 msgid "Copy hidden data"
 msgstr "Копировать скрытые данные"
 
-#: src/transume/ui/pages.py:875
+#: src/transume/ui/pages.py:912
 msgid "Include hidden"
 msgstr "Включить скрытые"
 
-#: src/transume/ui/pages.py:890
+#: src/transume/ui/pages.py:927
 msgid "AFTER COMPLETION"
 msgstr "ПОСЛЕ ЗАВЕРШЕНИЯ"
 
-#: src/transume/ui/pages.py:892
+#: src/transume/ui/pages.py:929
 msgid "Do nothing"
 msgstr "Ничего не делать"
 
-#: src/transume/ui/pages.py:892
+#: src/transume/ui/pages.py:929
 msgid "Power off"
 msgstr "Выключить"
 
-#: src/transume/ui/pages.py:892
+#: src/transume/ui/pages.py:929
 msgid "Reboot"
 msgstr "Перезагрузить"
 
-#: src/transume/ui/pages.py:895
+#: src/transume/ui/pages.py:931
 msgid "The selected action is passed to Clonezilla after a successful job."
 msgstr "Выбранное действие будет передано Clonezilla после успешного завершения задачи."
 
-#: src/transume/ui/pages.py:917
+#: src/transume/ui/pages.py:953
 msgid "Advanced options"
 msgstr "Дополнительные параметры"
 
-#: src/transume/ui/pages.py:921
+#: src/transume/ui/pages.py:957
 msgid "Compatibility and recovery"
 msgstr "Совместимость и восстановление"
 
-#: src/transume/ui/pages.py:929 src/transume/ui/pages.py:941
+#: src/transume/ui/pages.py:965 src/transume/ui/pages.py:977
 msgid "Show advanced Clonezilla options"
 msgstr "Показать расширенные параметры Clonezilla"
 
-#: src/transume/ui/pages.py:940
+#: src/transume/ui/pages.py:976
 msgid "Hide advanced Clonezilla options"
 msgstr "Скрыть расширенные параметры Clonezilla"
 
-#: src/transume/ui/pages.py:964 src/transume/ui/pages.py:1105
-#: src/transume/ui/pages.py:1150
+#: src/transume/ui/pages.py:1000 src/transume/ui/pages.py:1193
+#: src/transume/ui/pages.py:1244
 msgid "Back"
 msgstr "Назад"
 
-#: src/transume/ui/pages.py:966
+#: src/transume/ui/pages.py:1002
 msgid "Return to the previous screen"
 msgstr "Вернуться к предыдущему экрану"
 
-#: src/transume/ui/pages.py:974
+#: src/transume/ui/pages.py:1010
 #, python-brace-format
 msgid "Review {operation}"
 msgstr "Просмотр {operation}"
 
-#: src/transume/ui/pages.py:1012
+#: src/transume/ui/pages.py:1048
 msgid "Selected item"
 msgstr "Выбранный элемент"
 
-#: src/transume/ui/pages.py:1023
+#: src/transume/ui/pages.py:1064
 #, python-brace-format
 msgid "Serial: {serial}"
 msgstr "Серийный номер: {serial}"
 
-#: src/transume/ui/pages.py:1025
+#: src/transume/ui/pages.py:1066
 #, python-brace-format
 msgid "WWN: {wwn}"
 msgstr "WWN: {wwn}"
 
-#: src/transume/ui/pages.py:1027
+#: src/transume/ui/pages.py:1068
 #, python-brace-format
 msgid "ID: {id}"
 msgstr "ID: {id}"
 
-#: src/transume/ui/pages.py:1031
+#: src/transume/ui/pages.py:1072
 #, python-brace-format
 msgid "Image status: {status}"
 msgstr "Статус образа: {status}"
 
-#: src/transume/ui/pages.py:1031
+#: src/transume/ui/pages.py:1072
 msgid "Clonezilla image"
 msgstr "Образ Clonezilla"
 
-#: src/transume/ui/pages.py:1033
+#: src/transume/ui/pages.py:1074
 msgid "Selected"
 msgstr "Выбрано"
 
-#: src/transume/ui/pages.py:1041
+#: src/transume/ui/pages.py:1083
+msgid "Choose source partition"
+msgstr "Выберите исходный раздел"
+
+#: src/transume/ui/pages.py:1084
+msgid "Clonezilla can map one selected image partition to one target partition."
+msgstr "Clonezilla может сопоставить один выбранный раздел образа с одним целевым разделом."
+
+#: src/transume/ui/pages.py:1094
+#, python-brace-format
+msgid "Choose destination for {partition}"
+msgstr "Выберите место назначения для {partition}"
+
+#: src/transume/ui/pages.py:1102
+msgid "Filesystem unknown"
+msgstr "Файловая система не определена"
+
+#: src/transume/ui/pages.py:1104
+#, python-brace-format
+msgid "{filesystem}, {size} bytes"
+msgstr "{filesystem}, {size} байт"
+
+#: src/transume/ui/pages.py:1125
 msgid "Storage folder"
 msgstr "Папка хранения"
 
-#: src/transume/ui/pages.py:1051
+#: src/transume/ui/pages.py:1135
 #, python-brace-format
 msgid "{count} mapped targets"
 msgstr "{count} сопоставленных целей"
 
-#: src/transume/ui/pages.py:1051
+#: src/transume/ui/pages.py:1135
 msgid "Explicit disk mapping"
 msgstr "Явное сопоставление дисков"
 
-#: src/transume/ui/pages.py:1057
+#: src/transume/ui/pages.py:1141
 msgid "Local image path"
 msgstr "Локальный путь к образу"
 
-#: src/transume/ui/pages.py:1089 src/transume/ui/window.py:407
+#: src/transume/ui/pages.py:1174
 msgid "Map restore disks"
 msgstr "Сопоставить диски для восстановления"
 
-#: src/transume/ui/pages.py:1089
+#: src/transume/ui/pages.py:1174
 msgid "Choose one unique target for each source disk. Order is preserved."
 msgstr "Выберите уникальный целевой диск для каждого исходного. Порядок сохраняется."
 
-#: src/transume/ui/pages.py:1093
+#: src/transume/ui/pages.py:1182
 msgid "size unknown"
 msgstr "размер неизвестен"
 
-#: src/transume/ui/pages.py:1094
+#: src/transume/ui/pages.py:1183
 #, python-brace-format
 msgid "{name}  {model}  {size}  {partitions} partitions"
 msgstr "{name}  {model}  {size}  {partitions} разделов"
 
-#: src/transume/ui/pages.py:1094
+#: src/transume/ui/pages.py:1183
 msgid "Unknown model"
 msgstr "Модель неизвестна"
 
-#: src/transume/ui/pages.py:1096
+#: src/transume/ui/pages.py:1185
 msgid "Choose target"
 msgstr "Выбрать целевой диск"
 
-#: src/transume/ui/pages.py:1101
+#: src/transume/ui/pages.py:1197
 msgid "Use mapping"
 msgstr "Использовать сопоставление"
 
-#: src/transume/ui/pages.py:1112
+#: src/transume/ui/pages.py:1205
 msgid "Target"
 msgstr "Цель"
 
-#: src/transume/ui/pages.py:1173
+#: src/transume/ui/pages.py:1267
 msgid "Choose a restore image"
 msgstr "Выберите образ для восстановления"
 
-#: src/transume/ui/pages.py:1174
+#: src/transume/ui/pages.py:1268
 msgid "A Clonezilla image is a folder containing its metadata and image data."
 msgstr "Образ Clonezilla — это папка, содержащая его метаданные и данные образа."
 
-#: src/transume/ui/pages.py:1178 src/transume/ui/pages.py:1422
+#: src/transume/ui/pages.py:1272 src/transume/ui/pages.py:1459
 msgid "No folder selected"
 msgstr "Папка не выбрана"
 
-#: src/transume/ui/pages.py:1181
+#: src/transume/ui/pages.py:1278
 msgid "Change folder"
 msgstr "Изменить папку"
 
-#: src/transume/ui/pages.py:1181
+#: src/transume/ui/pages.py:1278
 msgid "Open folder"
 msgstr "Открыть папку"
 
-#: src/transume/ui/pages.py:1185
-msgid "Current folder only"
-msgstr "Только текущая папка"
-
-#: src/transume/ui/pages.py:1185
-msgid "One level deep"
-msgstr "На один уровень глубже"
-
-#: src/transume/ui/pages.py:1185
-msgid "Two levels deep"
-msgstr "На два уровня глубже"
-
-#: src/transume/ui/pages.py:1187
-msgid "Image scan depth"
-msgstr "Глубина сканирования образов"
-
-#: src/transume/ui/pages.py:1192
+#: src/transume/ui/pages.py:1284
 msgid "Open the folder that contains your Clonezilla image folders."
 msgstr "Откройте папку, в которой находятся ваши папки с образами Clonezilla."
 
-#: src/transume/ui/pages.py:1194
+#: src/transume/ui/pages.py:1286
 msgid "Scanning this folder for Clonezilla images..."
 msgstr "Сканирование этой папки на наличие образов Clonezilla..."
 
-#: src/transume/ui/pages.py:1195
+#: src/transume/ui/pages.py:1287
 msgid "Cancel scan"
 msgstr "Отменить сканирование"
 
-#: src/transume/ui/pages.py:1201
+#: src/transume/ui/pages.py:1293
 msgid "No Clonezilla image folders were found here. Choose another folder to continue."
 msgstr "Папки с образами Clonezilla не найдены. Выберите другую папку для продолжения."
 
-#: src/transume/ui/pages.py:1205
+#: src/transume/ui/pages.py:1297
 #, python-brace-format
 msgid "Scan notes: {notes}"
 msgstr "Примечания к сканированию: {notes}"
 
-#: src/transume/ui/pages.py:1280
+#: src/transume/ui/pages.py:1366
 msgid "Scan cancelled; results are partial."
 msgstr "Сканирование отменено; результаты частичные."
 
-#: src/transume/ui/pages.py:1287
+#: src/transume/ui/pages.py:1373
 #, python-brace-format
 msgid "Could not scan this folder: {error}"
 msgstr "Не удалось просканировать папку: {error}"
 
-#: src/transume/ui/pages.py:1303 src/transume/ui/pages.py:1452
-#, python-brace-format
-msgid "{value} B"
-msgstr "{value} Б"
-
-#: src/transume/ui/pages.py:1306
+#: src/transume/ui/pages.py:1379
 msgid "Search image name, disk, or path"
 msgstr "Поиск по имени образа, диску или пути"
 
-#: src/transume/ui/pages.py:1327
-msgid "Source disks unavailable"
-msgstr "Исходные диски недоступны"
-
-#: src/transume/ui/pages.py:1328
-msgid "Date unavailable"
-msgstr "Дата недоступна"
-
-#: src/transume/ui/pages.py:1330
-#, python-brace-format
-msgid "{status}  |  {size}  |  {source}  |  {date}"
-msgstr "{status}  |  {size}  |  {source}  |  {date}"
-
-#: src/transume/ui/pages.py:1354 src/transume/ui/pages.py:1369
-msgid "Full path"
-msgstr "Полный путь"
-
-#: src/transume/ui/pages.py:1355 src/transume/ui/pages.py:1503
-msgid "Image type"
-msgstr "Тип образа"
-
-#: src/transume/ui/pages.py:1356 src/transume/ui/pages.py:1507
-msgid "Source disks"
-msgstr "Исходные диски"
-
-#: src/transume/ui/pages.py:1357 src/transume/ui/pages.py:1508
-msgid "Source partitions"
-msgstr "Исходные разделы"
-
-#: src/transume/ui/pages.py:1357 src/transume/ui/pages.py:1473
-msgid "None recorded"
-msgstr "Не записано"
-
-#: src/transume/ui/pages.py:1358 src/transume/ui/pages.py:1506
-msgid "Logical source size"
-msgstr "Логический размер источника"
-
-#: src/transume/ui/pages.py:1358 src/transume/ui/pages.py:1359
-#: src/transume/ui/pages.py:1446 src/transume/ui/pages.py:1495
-#: src/transume/ui/pages.py:1955 src/transume/ui/pages.py:1958
-msgid "Unknown"
-msgstr "Неизвестно"
-
-#: src/transume/ui/pages.py:1359
-msgid "Clonezilla version"
-msgstr "Версия Clonezilla"
-
-#: src/transume/ui/pages.py:1360 src/transume/ui/pages.py:1363
-msgid "None detected"
-msgstr "Не обнаружено"
-
-#: src/transume/ui/pages.py:1361
-msgid "Split"
-msgstr "Разделение"
-
-#: src/transume/ui/pages.py:1361
-#, python-brace-format
-msgid "Yes ({parts} parts)"
-msgstr "Да ({parts} частей)"
-
-#: src/transume/ui/pages.py:1361 src/transume/ui/pages.py:1362
-msgid "No"
-msgstr "Нет"
-
-#: src/transume/ui/pages.py:1362
-msgid "Encrypted"
-msgstr "Зашифровано"
-
-#: src/transume/ui/pages.py:1362
-msgid "Yes"
-msgstr "Да"
-
-#: src/transume/ui/pages.py:1363
-msgid "Checksums"
-msgstr "Контрольные суммы"
-
-#: src/transume/ui/pages.py:1364
-msgid "Status"
-msgstr "Статус"
-
-#: src/transume/ui/pages.py:1365
-msgid "Problems"
-msgstr "Проблемы"
-
-#: src/transume/ui/pages.py:1366
-msgid "Metadata warnings"
-msgstr "Предупреждения о метаданных"
-
-#: src/transume/ui/pages.py:1369
-#, python-brace-format
-msgid "{name}: {value}"
-msgstr "{name}: {value}"
-
-#: src/transume/ui/pages.py:1370
-msgid "Use this image"
-msgstr "Использовать этот образ"
-
-#: src/transume/ui/pages.py:1395 src/transume/ui/pages.py:1561
+#: src/transume/ui/pages.py:1432 src/transume/ui/pages.py:1555
 msgid "Could not open folder"
 msgstr "Не удалось открыть папку"
 
-#: src/transume/ui/pages.py:1420 src/transume/ui/window.py:31
+#: src/transume/ui/pages.py:1457 src/transume/ui/pages.py:1490
+#: src/transume/ui/window.py:33
 msgid "Images"
 msgstr "Образы"
 
-#: src/transume/ui/pages.py:1420
+#: src/transume/ui/pages.py:1457
 msgid "Choose a folder to inspect current image status."
 msgstr "Выберите папку для проверки статуса текущего образа."
 
-#: src/transume/ui/pages.py:1426
+#: src/transume/ui/pages.py:1463
 msgid "Refresh"
 msgstr "Обновить"
 
-#: src/transume/ui/pages.py:1434
+#: src/transume/ui/pages.py:1471
 msgid "No Clonezilla image folders found. Choose a folder to scan."
 msgstr "Папки с образами Clonezilla не найдены. Выберите папку для сканирования."
 
-#: src/transume/ui/pages.py:1457
-msgid "Full disk image"
-msgstr "Полный образ диска"
-
-#: src/transume/ui/pages.py:1458
-msgid "Partition image"
-msgstr "Образ раздела"
-
-#: src/transume/ui/pages.py:1459
-msgid "Unknown image type"
-msgstr "Неизвестный тип образа"
-
-#: src/transume/ui/pages.py:1472
-#, python-brace-format
-msgid "{name} ({detail})"
-msgstr "{name} ({detail})"
-
-#: src/transume/ui/pages.py:1478
-#, python-brace-format
-msgid "Passed on {date}"
-msgstr "Проверено {date}"
-
-#: src/transume/ui/pages.py:1480
-#, python-brace-format
-msgid "Outdated; last passed on {date}"
-msgstr "Устарело; последний раз проверено {date}"
-
-#: src/transume/ui/pages.py:1481
-msgid "Not verified"
-msgstr "Не проверено"
-
-#: src/transume/ui/pages.py:1498
-msgid "uncompressed"
-msgstr "без сжатия"
-
-#: src/transume/ui/pages.py:1499
-#, python-brace-format
-msgid "split into {count} files"
-msgstr "разделено на {count} файлов"
-
-#: src/transume/ui/pages.py:1499
-msgid "single payload"
-msgstr "единый файл данных"
-
-#: src/transume/ui/pages.py:1500
-msgid "encrypted"
-msgstr "зашифровано"
-
-#: src/transume/ui/pages.py:1500
-msgid "not encrypted"
-msgstr "не зашифровано"
-
-#: src/transume/ui/pages.py:1504
-msgid "Created"
-msgstr "Создано"
-
-#: src/transume/ui/pages.py:1505
-msgid "Image data"
-msgstr "Данные образа"
-
-#: src/transume/ui/pages.py:1509
-msgid "Storage format"
-msgstr "Формат хранения"
-
-#: src/transume/ui/pages.py:1522
-msgid "Image issues"
-msgstr "Проблемы с образом"
-
-#: src/transume/ui/pages.py:1527
+#: src/transume/ui/pages.py:1523
 msgid "Check image"
 msgstr "Проверить образ"
 
-#: src/transume/ui/pages.py:1532
+#: src/transume/ui/pages.py:1525
 #, python-brace-format
 msgid "Requires a usable image and {capability}"
 msgstr "Требуется рабочий образ и {capability}"
 
-#: src/transume/ui/pages.py:1537
-msgid "Explore files"
-msgstr "Просмотреть файлы"
-
-#: src/transume/ui/pages.py:1539
+#: src/transume/ui/pages.py:1529
 msgid "Image Explorer is unavailable"
 msgstr "Проводник образов недоступен"
 
-#: src/transume/ui/pages.py:1543
+#: src/transume/ui/pages.py:1531
+msgid "Explore files"
+msgstr "Просмотреть файлы"
+
+#: src/transume/ui/pages.py:1535
 msgid "Open containing folder"
 msgstr "Открыть содержащую папку"
 
-#: src/transume/ui/pages.py:1546 src/transume/ui/pages.py:1695
+#: src/transume/ui/pages.py:1537 src/transume/ui/pages.py:1700
 msgid "Rename"
 msgstr "Переименовать"
 
-#: src/transume/ui/pages.py:1550 src/transume/ui/pages.py:1718
+#: src/transume/ui/pages.py:1540 src/transume/ui/pages.py:1726
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/transume/ui/pages.py:1582
+#: src/transume/ui/pages.py:1577 src/transume/ui/pages.py:1583
 msgid "Choose partition"
 msgstr "Выбрать раздел"
 
-#: src/transume/ui/pages.py:1584
+#: src/transume/ui/pages.py:1587
 msgid "Explore"
 msgstr "Открыть"
 
-#: src/transume/ui/pages.py:1613
+#: src/transume/ui/pages.py:1618
 msgid "Image files mounted"
 msgstr "Файлы образа смонтированы"
 
-#: src/transume/ui/pages.py:1620
+#: src/transume/ui/pages.py:1625
 msgid "Image files are ready"
 msgstr "Файлы образа готовы"
 
-#: src/transume/ui/pages.py:1621
+#: src/transume/ui/pages.py:1626
 msgid "The image is mounted read-only. Open it in the file manager, or unmount it when finished."
 msgstr "Образ смонтирован только для чтения. Откройте его в файловом менеджере или размонтируйте после завершения работы."
 
-#: src/transume/ui/pages.py:1630
+#: src/transume/ui/pages.py:1635
 msgid "Unmount"
 msgstr "Отмонтировать"
 
-#: src/transume/ui/pages.py:1631
+#: src/transume/ui/pages.py:1636
 msgid "Open files"
 msgstr "Открыть файлы"
 
-#: src/transume/ui/pages.py:1637
+#: src/transume/ui/pages.py:1642
 msgid "Explorer action failed"
 msgstr "Ошибка при выполнении действия в Проводнике"
 
-#: src/transume/ui/pages.py:1640
+#: src/transume/ui/pages.py:1645
 msgid "Unmounting image files..."
 msgstr "Размонтирование файлов образа..."
 
-#: src/transume/ui/pages.py:1656
+#: src/transume/ui/pages.py:1661
 msgid "Could not explore image"
 msgstr "Не удалось просмотреть образ"
 
-#: src/transume/ui/pages.py:1665
+#: src/transume/ui/pages.py:1670
 #, python-brace-format
 msgid "Could not unmount image files: {detail}"
 msgstr "Не удалось размонтировать файлы образа: {detail}"
 
-#: src/transume/ui/pages.py:1681
+#: src/transume/ui/pages.py:1686
 msgid "Rename image"
 msgstr "Переименовать образ"
 
-#: src/transume/ui/pages.py:1688
+#: src/transume/ui/pages.py:1693
 msgid "Choose a new image name"
 msgstr "Выберите новое имя образа"
 
-#: src/transume/ui/pages.py:1689
+#: src/transume/ui/pages.py:1694
 msgid "Use letters, digits, dots, underscores, or hyphens. The image data will not be changed."
 msgstr "Используйте буквы, цифры, точки, подчёркивания или дефисы. Данные образа изменены не будут."
 
-#: src/transume/ui/pages.py:1692
+#: src/transume/ui/pages.py:1697
 msgid "New image name"
 msgstr "Новое имя образа"
 
-#: src/transume/ui/pages.py:1699
+#: src/transume/ui/pages.py:1707
 msgid "Could not rename image"
 msgstr "Не удалось переименовать образ"
 
-#: src/transume/ui/pages.py:1706
+#: src/transume/ui/pages.py:1714
 msgid "Delete image"
 msgstr "Удалить образ"
 
-#: src/transume/ui/pages.py:1713
+#: src/transume/ui/pages.py:1721
 msgid "Delete this image?"
 msgstr "Удалить этот образ?"
 
-#: src/transume/ui/pages.py:1715
+#: src/transume/ui/pages.py:1723
 #, python-brace-format
 msgid "Type {name} to move this image to protected trash and delete it."
 msgstr "Введите {name}, чтобы переместить этот образ в защищённую корзину и удалить."
 
-#: src/transume/ui/pages.py:1726
+#: src/transume/ui/pages.py:1737
 msgid "Could not fully delete image"
 msgstr "Не удалось полностью удалить образ"
 
-#: src/transume/ui/pages.py:1726
+#: src/transume/ui/pages.py:1737
 #, python-brace-format
 msgid "{error}{recovery}"
 msgstr "{error}{recovery}"
 
-#: src/transume/ui/pages.py:1726
+#: src/transume/ui/pages.py:1737
 #, python-brace-format
 msgid ""
 "\n"
@@ -1407,70 +1237,70 @@ msgstr ""
 "\n"
 "Путь восстановления: {path}"
 
-#: src/transume/ui/pages.py:1735 src/transume/ui/window.py:460
-#: src/transume/ui/window.py:500
+#: src/transume/ui/pages.py:1746 src/transume/ui/window.py:575
+#: src/transume/ui/window.py:623
 msgid "Operation is not ready"
 msgstr "Операция не готова"
 
-#: src/transume/ui/pages.py:1751
+#: src/transume/ui/pages.py:1762
 msgid "Review before start"
 msgstr "Проверьте перед запуском"
 
-#: src/transume/ui/pages.py:1751
+#: src/transume/ui/pages.py:1762
 msgid "Confirm the route and consequences. Nothing has been changed yet."
 msgstr "Подтвердите маршрут и последствия. Пока ничего не изменено."
 
-#: src/transume/ui/pages.py:1754
+#: src/transume/ui/pages.py:1765
 #, python-brace-format
 msgid "{operation} route"
 msgstr "Маршрут {operation}"
 
-#: src/transume/ui/pages.py:1755
+#: src/transume/ui/pages.py:1766
 #, python-brace-format
 msgid "Source: {source}"
 msgstr "Источник: {source}"
 
-#: src/transume/ui/pages.py:1755 src/transume/ui/pages.py:1756
+#: src/transume/ui/pages.py:1766 src/transume/ui/pages.py:1767
 msgid "Not selected"
 msgstr "Не выбрано"
 
-#: src/transume/ui/pages.py:1756
+#: src/transume/ui/pages.py:1767
 #, python-brace-format
 msgid "Destination: {destination}"
 msgstr "Назначение: {destination}"
 
-#: src/transume/ui/pages.py:1758
+#: src/transume/ui/pages.py:1769
 #, python-brace-format
 msgid "Image name: {name}"
 msgstr "Имя образа: {name}"
 
-#: src/transume/ui/pages.py:1758
+#: src/transume/ui/pages.py:1769
 msgid "Not applicable"
 msgstr "Не применяется"
 
-#: src/transume/ui/pages.py:1759
+#: src/transume/ui/pages.py:1770
 #, python-brace-format
 msgid "Post action: {action}"
 msgstr "Действие после: {action}"
 
-#: src/transume/ui/pages.py:1762
+#: src/transume/ui/pages.py:1773
 #, python-brace-format
 msgid "Target mapping: {mapping}"
 msgstr "Целевое отображение: {mapping}"
 
-#: src/transume/ui/pages.py:1768
+#: src/transume/ui/pages.py:1779
 msgid "Selected options"
 msgstr "Выбранные параметры"
 
-#: src/transume/ui/pages.py:1772
+#: src/transume/ui/pages.py:1783
 msgid "Warning: all data on the destination drive will be overwritten."
 msgstr "Внимание: все данные на целевом диске будут перезаписаны."
 
-#: src/transume/ui/pages.py:1774
+#: src/transume/ui/pages.py:1785
 msgid "Destructive operation warning. All destination data will be overwritten."
 msgstr "Внимание: операция приведёт к удалению данных. Все данные на целевом диске будут перезаписаны."
 
-#: src/transume/ui/pages.py:1776
+#: src/transume/ui/pages.py:1787
 msgid ""
 "Preflight checks\n"
 "• Device identities will be verified again\n"
@@ -1482,115 +1312,115 @@ msgstr ""
 "• Проверяются точки монтирования и доступное место\n"
 "• Авторизация запрашивается только при запуске"
 
-#: src/transume/ui/pages.py:1783
+#: src/transume/ui/pages.py:1794
 msgid "Automation"
 msgstr "Автоматизация"
 
-#: src/transume/ui/pages.py:1789
+#: src/transume/ui/pages.py:1800
 msgid "You can run this Clonezilla command separately as root for automation. Direct execution bypasses Transume preflight, device identity revalidation, and PolicyKit safeguards."
 msgstr "Вы можете выполнить эту команду Clonezilla отдельно от root для автоматизации. Прямой запуск обходит предварительные проверки Transume, повторную проверку идентификаторов устройств и защиту PolicyKit."
 
-#: src/transume/ui/pages.py:1797
+#: src/transume/ui/pages.py:1808
 msgid "Validated Clonezilla command preview"
 msgstr "Просмотр проверенной команды Clonezilla"
 
-#: src/transume/ui/pages.py:1805 src/transume/ui/pages.py:1806
+#: src/transume/ui/pages.py:1816 src/transume/ui/pages.py:1817
 msgid "Copy command"
 msgstr "Скопировать команду"
 
-#: src/transume/ui/pages.py:1813
+#: src/transume/ui/pages.py:1824
 #, python-brace-format
 msgid "Start {operation}"
 msgstr "Запустить {operation}"
 
-#: src/transume/ui/pages.py:1819
+#: src/transume/ui/pages.py:1830
 #, python-brace-format
 msgid "Type destination serial suffix {suffix}"
 msgstr "Введите серийный суффикс назначения {suffix}"
 
-#: src/transume/ui/pages.py:1819
+#: src/transume/ui/pages.py:1830
 msgid "Type START to confirm all targets"
 msgstr "Введите START для подтверждения всех целей"
 
-#: src/transume/ui/pages.py:1822
+#: src/transume/ui/pages.py:1833
 #, python-brace-format
 msgid "Confirm destination by typing serial suffix {suffix}"
 msgstr "Подтвердите назначение, введя серийный суффикс {suffix}"
 
-#: src/transume/ui/pages.py:1822
+#: src/transume/ui/pages.py:1833
 msgid "Type START to confirm all destructive targets"
 msgstr "Введите START для подтверждения всех деструктивных целей"
 
-#: src/transume/ui/pages.py:1838
+#: src/transume/ui/pages.py:1849
 msgid "Nothing has been changed yet"
 msgstr "Пока ничего не изменено"
 
-#: src/transume/ui/pages.py:1852 src/transume/ui/window.py:32
+#: src/transume/ui/pages.py:1863 src/transume/ui/window.py:34
 msgid "Activity"
 msgstr "Активность"
 
-#: src/transume/ui/pages.py:1852
+#: src/transume/ui/pages.py:1863
 msgid "Current work, recent results, and redacted logs."
 msgstr "Текущие задачи, последние результаты и сокращённые логи."
 
-#: src/transume/ui/pages.py:1861
+#: src/transume/ui/pages.py:1872
 msgid "No operation is running"
 msgstr "Нет выполняющихся операций"
 
-#: src/transume/ui/pages.py:1864
+#: src/transume/ui/pages.py:1875
 msgid "Start a backup, restore, or clone operation to see its progress here."
 msgstr "Запустите резервное копирование, восстановление или клонирование, чтобы увидеть ход выполнения."
 
-#: src/transume/ui/pages.py:1872
+#: src/transume/ui/pages.py:1883
 msgid "Operation is starting"
 msgstr "Операция запускается"
 
-#: src/transume/ui/pages.py:1881 src/transume/ui/pages.py:1986
+#: src/transume/ui/pages.py:1892 src/transume/ui/pages.py:2005
 msgid "Preparing"
 msgstr "Подготовка"
 
-#: src/transume/ui/pages.py:1882
+#: src/transume/ui/pages.py:1893
 msgid "Current operation progress: preparing"
 msgstr "Ход текущей операции: подготовка"
 
-#: src/transume/ui/pages.py:1884
+#: src/transume/ui/pages.py:1895
 msgid "Preparing operation"
 msgstr "Подготовка операции"
 
-#: src/transume/ui/pages.py:1887
+#: src/transume/ui/pages.py:1898
 msgid "Operation timing and transfer status"
 msgstr "Время выполнения и статус передачи"
 
-#: src/transume/ui/pages.py:1917
+#: src/transume/ui/pages.py:1928 src/transume/ui/pages.py:2115
 msgid "Copy the complete operation log"
 msgstr "Скопировать полный лог операции"
 
-#: src/transume/ui/pages.py:1918
+#: src/transume/ui/pages.py:1929 src/transume/ui/pages.py:2116
 msgid "Copy operation log"
 msgstr "Скопировать лог операции"
 
-#: src/transume/ui/pages.py:1923 src/transume/ui/pages.py:1961
+#: src/transume/ui/pages.py:1934 src/transume/ui/pages.py:1972
 msgid "Open log"
 msgstr "Открыть лог"
 
-#: src/transume/ui/pages.py:1943
+#: src/transume/ui/pages.py:1954
 msgid "No completed operations yet."
 msgstr "Пока нет завершённых операций."
 
-#: src/transume/ui/pages.py:1946
+#: src/transume/ui/pages.py:1957
 #, python-brace-format
 msgid "{count} recent operation(s)"
 msgstr "{count} последних операций"
 
-#: src/transume/ui/pages.py:1947 src/transume/ui/pages.py:1969
+#: src/transume/ui/pages.py:1958 src/transume/ui/pages.py:1985
 msgid "Clear history"
 msgstr "Очистить историю"
 
-#: src/transume/ui/pages.py:1953 src/transume/ui/pages.py:1954
+#: src/transume/ui/pages.py:1964 src/transume/ui/pages.py:1965
 msgid "Running"
 msgstr "Выполняется"
 
-#: src/transume/ui/pages.py:1958
+#: src/transume/ui/pages.py:1969
 #, python-brace-format
 msgid ""
 "{operation} | {status} | {finished} | Duration {duration}\n"
@@ -1603,201 +1433,220 @@ msgstr ""
 "Проверка: {verification}  Очистка: {cleanup}\n"
 "{detail}"
 
-#: src/transume/ui/pages.py:1967
+#: src/transume/ui/pages.py:1979
 msgid "Clear activity history?"
 msgstr "Очистить историю активности?"
 
-#: src/transume/ui/pages.py:1967
+#: src/transume/ui/pages.py:1980
 msgid "Recent operation results will be permanently removed."
 msgstr "Результаты последних операций будут удалены без возможности восстановления."
 
-#: src/transume/ui/pages.py:1983
+#: src/transume/ui/pages.py:2002
 #, python-brace-format
 msgid "{operation} is running"
 msgstr "{operation} выполняется"
 
-#: src/transume/ui/pages.py:2008
+#: src/transume/ui/pages.py:2027
 msgid "Cancelling operation"
 msgstr "Отмена операции"
 
-#: src/transume/ui/pages.py:2014
+#: src/transume/ui/pages.py:2033
 #, python-brace-format
 msgid "{percent:.1f}%"
 msgstr "{percent:.1f}%"
 
-#: src/transume/ui/pages.py:2015
+#: src/transume/ui/pages.py:2034
 #, python-brace-format
 msgid "Current operation progress: {percent:.1f} percent"
 msgstr "Текущий прогресс операции: {percent:.1f} процентов"
 
-#: src/transume/ui/pages.py:2021
+#: src/transume/ui/pages.py:2040
 #, python-brace-format
 msgid "Warning: {message}"
 msgstr "Внимание: {message}"
 
-#: src/transume/ui/pages.py:2047
+#: src/transume/ui/pages.py:2066
 #, python-brace-format
 msgid "Elapsed {minutes}:{seconds:02d}"
 msgstr "Прошло {minutes}:{seconds:02d}"
 
-#: src/transume/ui/pages.py:2049
+#: src/transume/ui/pages.py:2068
 #, python-brace-format
 msgid "{elapsed}  ETA {minutes}:{seconds:02d}"
 msgstr "{elapsed}  Оставшееся время: {minutes}:{seconds:02d}"
 
-#: src/transume/ui/pages.py:2060
+#: src/transume/ui/pages.py:2079
 msgid "Log is unavailable."
 msgstr "Журнал недоступен."
 
-#: src/transume/ui/pages.py:2061
+#: src/transume/ui/pages.py:2080 src/transume/ui/pages.py:2093
 msgid "Operation log"
 msgstr "Журнал операций"
 
-#: src/transume/ui/pages.py:2076
+#: src/transume/ui/pages.py:2134
 msgid "Operation completed"
 msgstr "Операция завершена"
 
-#: src/transume/ui/pages.py:2076
+#: src/transume/ui/pages.py:2134 src/transume/ui/window.py:680
 msgid "Operation cancelled"
 msgstr "Операция отменена"
 
-#: src/transume/ui/pages.py:2076
+#: src/transume/ui/pages.py:2134
 msgid "Operation failed"
 msgstr "Операция завершилась с ошибкой"
 
-#: src/transume/ui/pages.py:2079
+#: src/transume/ui/pages.py:2137
 msgid "Completed"
 msgstr "Завершено"
 
-#: src/transume/ui/pages.py:2081
+#: src/transume/ui/pages.py:2139
 msgid "Cancelled"
 msgstr "Отменено"
 
-#: src/transume/ui/pages.py:2083
+#: src/transume/ui/pages.py:2141
 msgid "Failed"
 msgstr "Ошибка"
 
-#: src/transume/ui/pages.py:2086
+#: src/transume/ui/pages.py:2144
 msgid "Warning: the destination may be partially written."
 msgstr "Внимание: возможно, назначение записано не полностью."
 
-#: src/transume/ui/window.py:27
+#: src/transume/ui/window.py:29
 msgid "About"
 msgstr "О программе"
 
-#: src/transume/ui/window.py:28 tests/test_i18n.py:10
+#: src/transume/ui/window.py:30 tests/test_i18n.py:22
 msgid "Backup"
 msgstr "Резервное копирование"
 
-#: src/transume/ui/window.py:30
+#: src/transume/ui/window.py:32
 msgid "Clone"
 msgstr "Клонирование"
 
-#: src/transume/ui/window.py:59
+#: src/transume/ui/window.py:62
 msgid "Navigation"
 msgstr "Навигация"
 
-#: src/transume/ui/window.py:62
+#: src/transume/ui/window.py:65
 msgid "Navigation menu"
 msgstr "Меню навигации"
 
-#: src/transume/ui/window.py:76 src/transume/ui/window.py:116
+#: src/transume/ui/window.py:80 src/transume/ui/window.py:121
 #, python-brace-format
 msgid "Open {label}"
 msgstr "Открыть {label}"
 
-#: src/transume/ui/window.py:186 src/transume/ui/window.py:608
+#: src/transume/ui/window.py:195 src/transume/ui/window.py:723
 msgid "Storage cleanup failed"
 msgstr "Не удалось очистить хранилище"
 
-#: src/transume/ui/window.py:254
+#: src/transume/ui/window.py:261
 #, python-brace-format
 msgid "Could not scan items: {error}"
 msgstr "Не удалось просканировать элементы: {error}"
 
-#: src/transume/ui/window.py:269
+#: src/transume/ui/window.py:276
 msgid "No Clonezilla images were found in this folder. Return and choose a different folder."
 msgstr "В этой папке не найдено образов Clonezilla. Вернитесь и выберите другую папку."
 
-#: src/transume/ui/window.py:273
+#: src/transume/ui/window.py:280
 msgid "No storage devices are available."
 msgstr "Нет доступных устройств хранения."
 
-#: src/transume/ui/window.py:285
+#: src/transume/ui/window.py:291
 msgid "Storage is in use"
 msgstr "Хранилище используется"
 
-#: src/transume/ui/window.py:286
+#: src/transume/ui/window.py:292
 msgid "Wait for the current operation and storage cleanup to finish."
 msgstr "Дождитесь завершения текущей операции и очистки хранилища."
 
-#: src/transume/ui/window.py:390
-msgid "Choose restore image"
-msgstr "Выберите образ для восстановления"
+#: src/transume/ui/window.py:309
+msgid "Storage locations"
+msgstr "Хранилища"
 
-#: src/transume/ui/window.py:396
+#: src/transume/ui/window.py:310
+msgid "Choose a connected storage location or connect another one."
+msgstr "Выберите подключённое хранилище или подключите другое."
+
+#: src/transume/ui/window.py:329
+msgid "Use this storage"
+msgstr "Использовать это хранилище"
+
+#: src/transume/ui/window.py:332
+msgid "Forget"
+msgstr "Забыть"
+
+#: src/transume/ui/window.py:332
+msgid "Disconnect"
+msgstr "Отключить"
+
+#: src/transume/ui/window.py:340
+msgid "Connect another"
+msgstr "Подключить другое"
+
+#: src/transume/ui/window.py:424 src/transume/ui/window.py:463
+msgid "Requested storage folder was not found."
+msgstr "Запрошенная папка хранилища не найдена."
+
+#: src/transume/ui/window.py:427 src/transume/ui/window.py:465
+msgid "Storage folder is not accessible."
+msgstr "Папка хранилища недоступна."
+
+#: src/transume/ui/window.py:515
 #, python-brace-format
 msgid "Choose destination {index}"
 msgstr "Выберите назначение {index}"
 
-#: src/transume/ui/window.py:451
+#: src/transume/ui/window.py:568
 msgid "Preflight changed"
 msgstr "Проверка перед запуском изменена"
 
-#: src/transume/ui/window.py:472
-msgid "Review"
-msgstr "Обзор"
-
-#: src/transume/ui/window.py:476
+#: src/transume/ui/window.py:587
 msgid "Restore encrypted image"
 msgstr "Восстановить зашифрованный образ"
 
-#: src/transume/ui/window.py:478
-msgid "Passphrase"
-msgstr "Парольная фраза"
-
-#: src/transume/ui/window.py:479
-msgid "Backup encryption passphrase"
-msgstr "Парольная фраза для шифрования резервной копии"
-
-#: src/transume/ui/window.py:479
-msgid "Encrypted image passphrase"
-msgstr "Парольная фраза для зашифрованного образа"
-
-#: src/transume/ui/window.py:480
+#: src/transume/ui/window.py:588
 msgid "Set the eCryptfs passphrase for this backup."
 msgstr "Установите парольную фразу eCryptfs для этой резервной копии."
 
-#: src/transume/ui/window.py:480
+#: src/transume/ui/window.py:589
 msgid "Enter the eCryptfs passphrase required to restore this image."
 msgstr "Введите парольную фразу eCryptfs, необходимую для восстановления этого образа."
 
-#: src/transume/ui/window.py:482
+#: src/transume/ui/window.py:595
+msgid "Passphrase"
+msgstr "Парольная фраза"
+
+#: src/transume/ui/window.py:596
+msgid "Backup encryption passphrase"
+msgstr "Парольная фраза для шифрования резервной копии"
+
+#: src/transume/ui/window.py:596
+msgid "Encrypted image passphrase"
+msgstr "Парольная фраза для зашифрованного образа"
+
+#: src/transume/ui/window.py:598
 msgid "Confirm passphrase"
 msgstr "Подтвердите парольную фразу"
 
-#: src/transume/ui/window.py:484
+#: src/transume/ui/window.py:600
 msgid "Confirm backup encryption passphrase"
 msgstr "Подтвердите парольную фразу для шифрования резервной копии"
 
-#: src/transume/ui/window.py:487
+#: src/transume/ui/window.py:605
 msgid "Start"
 msgstr "Запустить"
 
-#: src/transume/ui/window.py:497
+#: src/transume/ui/window.py:619
 msgid "Passphrases do not match"
 msgstr "Парольные фразы не совпадают"
 
-#: src/transume/ui/window.py:562
-#, python-brace-format
-msgid "{detail}; storage cleanup failed: {error}"
-msgstr "{detail}; очистка хранилища не выполнена: {error}"
-
-#: src/transume/ui/window.py:609
+#: src/transume/ui/window.py:724
 msgid "The mounted storage remains available. Retry unmount before removing media."
 msgstr "Смонтированное хранилище остаётся доступным. Повторите попытку размонтирования перед извлечением носителя."
 
-#: src/transume/ui/window.py:611
+#: src/transume/ui/window.py:725
 msgid "Retry unmount"
 msgstr "Повторить размонтирование"
 
@@ -1812,3 +1661,27 @@ msgstr "Резервное копирование, восстановление 
 #: data/dev.minios.transume.desktop:9
 msgid "backup;restore;clone;disk;image;Clonezilla;"
 msgstr "backup;restore;clone;disk;image;Clonezilla;"
+
+#: data/polkit/dev.minios.transume.policy:10
+msgid "Mount a repository or read-only image explorer for Transume"
+msgstr "Смонтировать репозиторий или открыть просмотрщик образов только для чтения в Transume"
+
+#: data/polkit/dev.minios.transume.policy:11
+msgid "Authentication is required to mount Transume storage"
+msgstr "Для монтирования хранилища Transume требуется аутентификация"
+
+#: data/polkit/dev.minios.transume.policy:22
+msgid "Run a privileged read-only check for Transume"
+msgstr "Выполнить привилегированную проверку только для чтения в Transume"
+
+#: data/polkit/dev.minios.transume.policy:23
+msgid "Authentication is required to inspect storage devices"
+msgstr "Для просмотра устройств хранения требуется аутентификация"
+
+#: data/polkit/dev.minios.transume.policy:34
+msgid "Run a destructive local storage job for Transume"
+msgstr "Выполнить разрушительную локальную операцию с хранилищем для Transume"
+
+#: data/polkit/dev.minios.transume.policy:35
+msgid "Authentication is required to overwrite storage devices"
+msgstr "Для перезаписи устройств хранения требуется аутентификация"

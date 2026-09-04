@@ -12,5 +12,7 @@ done
 test -r /usr/share/icons/hicolor/symbolic/apps/transume-symbolic.svg
 test -r /usr/share/pixmaps/transume-logo.svg
 grep -qx 'Icon=transume' /usr/share/applications/dev.minios.transume.desktop
+test -r /usr/share/locale/ru/LC_MESSAGES/transume.mo
 PYTHONPATH=/usr/lib/transume python3 -c 'import transume'
+LANGUAGE=ru PYTHONPATH=/usr/lib/transume python3 -c 'from transume.i18n import _; assert _("Backup") == "Резервное копирование"'
 python3 -c 'import pathlib; assert pathlib.Path("/usr/lib/transume/transume-runner").read_text().startswith("#!/bin/sh")'

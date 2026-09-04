@@ -1,10 +1,11 @@
 import configparser
 import pathlib
+import re
 import unittest
 import xml.etree.ElementTree as ET
 
 from transume.application import _prefers_dark
-from transume import i18n
+from transume import __version__, i18n
 
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -104,6 +105,32 @@ class MetadataTests(unittest.TestCase):
     def test_python_contract_is_debian_13(self):
         project = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
         self.assertIn('requires-python = ">=3.13"', project)
+
+    def test_release_versions_are_synchronized(self):
+        project = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+        project_version = re.search(
+            r'^version = "([^"]+)"$', project, re.MULTILINE).group(1)
+        changelog_version = re.search(
+            r'^transume \(([^)]+)\)',
+            (ROOT / "debian/changelog").read_text(encoding="utf-8"),
+        ).group(1)
+        metainfo = ET.parse(
+            ROOT / "data/dev.minios.transume.metainfo.xml"
+        ).getroot()
+        appstream_version = metainfo.find("./releases/release").get("version")
+        man_versions = {
+            re.search(
+                r'"Transume ([^"]+)"',
+                (ROOT / path).read_text(encoding="utf-8").splitlines()[0],
+            ).group(1)
+            for path in ("data/transume.1", "data/transume-cli.1")
+        }
+
+        self.assertEqual(
+            {__version__, project_version, changelog_version, appstream_version}
+            | man_versions,
+            {__version__},
+        )
 
 
 if __name__ == "__main__":
