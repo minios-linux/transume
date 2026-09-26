@@ -61,6 +61,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -86,6 +87,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -128,6 +130,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -152,6 +155,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -210,6 +214,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -275,6 +280,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -340,8 +346,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -468,6 +476,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -551,6 +560,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -576,6 +586,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -618,6 +629,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -642,6 +654,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -700,6 +713,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -765,6 +779,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -830,8 +845,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -958,6 +975,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -1041,6 +1059,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -1066,6 +1085,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -1108,6 +1128,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -1132,6 +1153,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -1190,6 +1212,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -1255,6 +1278,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -1320,8 +1344,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -1448,6 +1474,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -1531,6 +1558,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -1556,6 +1584,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -1598,6 +1627,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -1622,6 +1652,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -1680,6 +1711,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -1745,6 +1777,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -1810,8 +1843,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -1938,6 +1973,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -2021,6 +2057,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -2046,6 +2083,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -2088,6 +2126,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -2112,6 +2151,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -2170,6 +2210,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -2235,6 +2276,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -2300,8 +2342,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -2428,6 +2472,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -2511,6 +2556,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -2536,6 +2582,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -2578,6 +2625,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -2602,6 +2650,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -2660,6 +2709,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -2725,6 +2775,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -2790,8 +2841,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -2918,6 +2971,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -3001,6 +3055,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -3026,6 +3081,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -3068,6 +3124,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -3092,6 +3149,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -3150,6 +3208,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -3215,6 +3274,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -3280,8 +3340,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -3408,6 +3470,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d
@@ -3491,6 +3554,7 @@ checksums:
         Backup plan: bb3aef8d90c613218979360719b202f6
         Before restore: a97117468bda0f8f103564957d4d242e
         Boot loader: c4f7a2ff12632a0c8eb55a98f62b1e1e
+        Browse and manage saved images: ba54ef64ac35d1f127756d6e906abdf6
         Browse images: dda8327f98ab076f4ef197fadad3afb4
         CHECKSUM: b9493189e36ddf81cabe5a2c63f62bc3
         CLONE METHOD: ca636e032b577c89ce28f70b236cc621
@@ -3516,6 +3580,7 @@ checksums:
         Choose a local folder first: 4a5a8253f0ec45d8cc72a44804f9189d
         Choose a new image name: ce3a3ca8d2e90e69dee9704da7b4607b
         Choose a restore image: fffb9e60cd04cea6132615c192dffcd7
+        Choose an action: bae256facba990a5c62da8f4f881a6e4
         Choose an image folder: 9c07d4e3a3ced57ef19b80423ad07019
         Choose destination: 8fee4d65e67faf3b5018cdd8d85998fb
         Choose destination {index}: dcc9e7cc5c34815e7f535078010cd3de
@@ -3558,6 +3623,7 @@ checksums:
         Connecting...: 3cc3bd74387dbede9e3d4e20353a701d
         'Connection failed: {detail}. Correct the details and retry.': 55278a3b0854afe929f178f56015d779
         Copied: a588b1abc58b8b758c4b34b69b9e10bb
+        Copy a disk or partition directly: da19e5169d2303a011a2f687d4b4f9e4
         Copy a disk or partition directly to an equal or larger local destination.: 467ab860e144435a5438b9a620ea651e
         Copy a redacted report without device identifiers, paths, or credentials: 61b3d8a1f1c0f946a660029d6bca9266
         Copy command: ec5eefe5a1b8d46ef1126992881fd5d4
@@ -3582,6 +3648,7 @@ checksums:
         'Could not scan this folder: {error}': e25cfdedaecbd57083bdf5587aefe808
         'Could not unmount image files: {detail}': 6704be9a1c6a789e2c7dbfb6df1be585
         Create a backup: f99b69945a176ffbedac86a22cf6c413
+        Create a disk or partition image: 2f1d02a41a3d3a2226bb8664606f2ab2
         Create images: 6da8942767e0aac1e5c0364c88e370b6
         Created: 0eceeb45861f9585dd7a97a3e36f85c6
         Credentials and passphrases are never stored in plans, command previews, activity history, or logs.: 1c6c946520ebf2c9ef93be60124f4fe7
@@ -3640,6 +3707,7 @@ checksums:
         Go back: 22b653bd8d2edcebb9e0036b4ac79262
         Gzip: 2548e50da66f41afea53de1cbbf3b30c
         Hide advanced Clonezilla options: bd799f1d0120da163bca94e6b2501a43
+        Home: 8cf04a9734132302f96da8e113e80ce5
         Host: c2ca16d048ec66e04bca283eab048ec2
         ? |-
             Host: {host}
@@ -3705,6 +3773,7 @@ checksums:
         One level deep: 4bc1fb5905348627e615e7c06b165c5f
         Only installed Clonezilla copy engines are shown.: 7a74d1a88dd352f2a7041c83edef0934
         Open {label}: a31ae9e34561b3f2a846c3054dc31085
+        Open Home: 715bfc9cc24174506205a2b114d8c0c7
         Open containing folder: 4a0ffaebfc0edd5939bb45489cb42c5a
         Open files: 6217dc1818f92a6ddb221a32eccbc24e
         Open folder: a6e75eb31dc77e8d077fb6f92909e191
@@ -3770,8 +3839,10 @@ checksums:
         Rescue mode: a6cef5a60983643f90b2d25cea4de2f8
         Resize: 9d723d04c40bfd81835c0766a698cf63
         Resize filesystem to fit: 676029b2aa0ea119f5ce4fe0b99db52c
+        Restoration: fa842aab8895c16045b781d27a16d2e2
         Restore: 2bd339d85ee3b33e513359ce781b60cc
         Restore EBR: 52fad06e9fa00e09c790be0534e206fa
+        Restore an image to a device: 386c884df89c5f86b0be241441e339f6
         Restore boot loader: 61b04aaeebe7b0c41ced8b2dc2b04b77
         Restore encrypted image: e563d34900386caa1fe9f5e2cd680c20
         Restore from an image: cff1eed150d25dc16816a1757c36035d
@@ -3898,6 +3969,7 @@ checksums:
         Validated Clonezilla command preview: dcba431a5816c8865a4a4301186fca86
         Verification: 52b8ffce119fe77b28034f2fdd35eb5f
         Verify after completion: a6dc46f8c1193fa5d2109deb036902d9
+        View operation history: 50d43f30962c81cf53be00b4a32f36fb
         'WWN: {wwn}': a478c103733009f6f16ffeba1922e79d
         Wait for the current operation and storage cleanup to finish.: ce2487c5850c13f252d9344231ee2e11
         'Warning: {message}': 32bda9cfeeb490d0a4538494929bbd5d

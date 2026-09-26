@@ -175,14 +175,24 @@ def main() -> int:
             f"requested {args.geometry}, realized {actual_geometry}"
         )
         assert window.get_width() >= 800 and window.get_height() >= 520
-        assert window._layout_mode == ("compact" if requested_width < 1240 else "wide")
-        assert window.rail.get_visible() == (requested_width >= 1240)
-        assert window.navigation_menu.get_visible() == (requested_width < 1240)
-        assert window.images_page.compact is (requested_width < 1240)
+        assert window._layout_mode == "compact"
+        assert not window.rail.get_visible()
+        assert window.navigation_menu.get_visible()
+        assert window.images_page.compact
         assert window.navigation_menu.get_popover() is window.navigation_popover
         assert set(window.compact_nav_buttons) == {item[0] for item in window.NAVIGATION}
         assert window.compact_nav_buttons["dashboard"].has_css_class("is-active")
         assert window.navigate_action.get_state().get_string() == "dashboard"
+        assert window.stack.get_visible_child_name() == "dashboard"
+        assert window.rail.get_last_child() is window.nav_buttons["about"]
+        assert window.home_page.tiles.get_max_children_per_line() == 2
+        assert set(window.home_page.action_buttons) == {"backup", "restore", "clone", "images", "activity"}
+        window.home_page.action_buttons["backup"].emit("clicked")
+        assert window.stack.get_visible_child_name() == "backup"
+        window.navigate("about")
+        assert window.stack.get_visible_child() is window.about_page
+        window.home_button.emit("clicked")
+        assert window.stack.get_visible_child_name() == "dashboard"
         window.navigate("restore")
         assert window.header_title.get_label() == "Transume"
         assert window.navigate_action.get_state().get_string() == "restore"
@@ -205,9 +215,9 @@ def main() -> int:
         assert window.stack.get_hhomogeneous() is False
         assert window.stack.get_vhomogeneous() is False
         for editor in window.route_editors:
-            assert editor.route.get_orientation() == (
-                Gtk.Orientation.VERTICAL if requested_width < 1240 else Gtk.Orientation.HORIZONTAL
-            )
+            assert editor.route.get_orientation() == Gtk.Orientation.VERTICAL
+            assert editor.context_expander.get_child() is editor.context
+            assert editor.context_scroll.get_child() is None
             assert editor.advanced_revealer.get_reveal_child() is False
             editor.advanced_toggle.emit("clicked")
             assert editor.advanced_revealer.get_reveal_child() is True

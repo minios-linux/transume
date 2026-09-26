@@ -1,3 +1,14 @@
+transume (1.1.0) unstable; urgency=medium
+
+  * Add a Home page with direct access to backup, restore, cloning, images
+    and activity, keeping application information on a separate About page.
+  * Improve compact-window navigation and expandable workflow settings.
+  * Warn about potentially insufficient backup space without rejecting
+    used-block backups solely on the logical source-device size.
+  * Refresh translations and regression coverage.
+
+ -- crims0n <crims0n@minios.dev>  Sat, 26 Sep 2026 18:54:28 +0300
+
 transume (1.0.2) unstable; urgency=medium
 
   * Fall back to installed catalogs until every source translation is compiled.

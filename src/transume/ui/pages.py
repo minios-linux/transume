@@ -343,8 +343,48 @@ if Gtk is not None:
             self.message.set_label(_("Connection failed: {detail}. Correct the details and retry.").format(detail=detail))
 
 
-    class DashboardPage(Gtk.ScrolledWindow):
-        __gtype_name__ = "TransumeDashboardPage"
+    class HomePage(Gtk.ScrolledWindow):
+        __gtype_name__ = "TransumeHomePage"
+
+        def __init__(self, navigate: Callable[[str], None]) -> None:
+            super().__init__(hscrollbar_policy=Gtk.PolicyType.NEVER)
+            content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18)
+            content.add_css_class("page")
+            content.append(Gtk.Label(label=_("Choose an action"), xalign=0,
+                                     css_classes=["page-title"]))
+            tiles = Gtk.FlowBox(selection_mode=Gtk.SelectionMode.NONE,
+                                column_spacing=16, row_spacing=16,
+                                min_children_per_line=1, max_children_per_line=2)
+            self.action_buttons: dict[str, Gtk.Button] = {}
+            for name, title, description, icon_name in (
+                ("backup", _("Backup"), _("Create a disk or partition image"), "document-save-symbolic"),
+                ("restore", _("Restoration"), _("Restore an image to a device"), "document-revert-symbolic"),
+                ("clone", _("Clone"), _("Copy a disk or partition directly"), "edit-copy-symbolic"),
+                ("images", _("Images"), _("Browse and manage saved images"), "folder-pictures-symbolic"),
+                ("activity", _("Activity"), _("View operation history"), "view-list-symbolic"),
+            ):
+                button = Gtk.Button()
+                button.add_css_class("action-card")
+                button.set_hexpand(True)
+                body = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
+                icon = Gtk.Image.new_from_icon_name(icon_name)
+                icon.set_pixel_size(32)
+                icon.set_halign(Gtk.Align.START)
+                body.append(icon)
+                body.append(Gtk.Label(label=title, xalign=0, css_classes=["card-title"]))
+                body.append(Gtk.Label(label=description, xalign=0, wrap=True,
+                                      css_classes=["muted"]))
+                button.set_child(body)
+                set_accessible_label(button, title)
+                button.connect("clicked", lambda _button, target=name: navigate(target))
+                tiles.insert(button, -1)
+                self.action_buttons[name] = button
+            content.append(tiles)
+            self.set_child(content)
+            self.tiles = tiles
+
+    class AboutPage(Gtk.ScrolledWindow):
+        __gtype_name__ = "TransumeAboutPage"
 
         def __init__(self, _navigate: Callable[[str], None], model: Any = None) -> None:
             super().__init__(hscrollbar_policy=Gtk.PolicyType.NEVER)
@@ -750,6 +790,7 @@ if Gtk is not None:
             context = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14)
             context.add_css_class("context-panel")
             context.set_vexpand(True)
+            self.context = context
             context_scroll = Gtk.ScrolledWindow(
                 hscrollbar_policy=Gtk.PolicyType.NEVER,
                 vscrollbar_policy=Gtk.PolicyType.AUTOMATIC,
@@ -1024,15 +1065,17 @@ if Gtk is not None:
                 arrow.set_from_icon_name(icon)
             if compact and self.context_scroll.get_parent() is self.content_row:
                 self.content_row.remove(self.context_scroll)
-                self.context_scroll.set_min_content_width(0)
-                self.context_scroll.set_max_content_width(-1)
-                self.context_expander.set_child(self.context_scroll)
+                # The page already scrolls. A nested scrolled window collapses
+                # settings into a narrow strip and traps the remaining controls.
+                self.context_scroll.set_child(None)
+                self.context.set_vexpand(False)
+                self.context_expander.set_child(self.context)
                 self.body.append(self.context_expander)
             elif not compact and self.context_expander.get_parent() is self.body:
                 self.body.remove(self.context_expander)
                 self.context_expander.set_child(None)
-                self.context_scroll.set_min_content_width(240)
-                self.context_scroll.set_max_content_width(240)
+                self.context.set_vexpand(True)
+                self.context_scroll.set_child(self.context)
                 self.content_row.append(self.context_scroll)
 
         def _set_option(self, key: str, value: str | bool | int) -> None:
@@ -1752,7 +1795,7 @@ if Gtk is not None:
 
         def __init__(self, operation: str, selection: dict[str, str], command: str,
                      destination_serial: str | None, risk: str, start_job: Callable[[], None],
-                     spec: Any | None = None) -> None:
+                     spec: Any | None = None, warnings: tuple[str, ...] = ()) -> None:
             super().__init__(orientation=Gtk.Orientation.VERTICAL)
             scroll = Gtk.ScrolledWindow(
                 hscrollbar_policy=Gtk.PolicyType.NEVER, vexpand=True,
@@ -1787,6 +1830,10 @@ if Gtk is not None:
             checks = Gtk.Label(label=_("Preflight checks\n• Device identities will be verified again\n• Mounts and available space will be checked\n• Authorization is requested only when starting"), xalign=0)
             checks.add_css_class("info-card")
             body.append(checks)
+            for message in warnings:
+                warning = Gtk.Label(label=_(message), xalign=0, wrap=True)
+                warning.add_css_class("warning-text")
+                body.append(warning)
             automation = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
             automation.add_css_class("info-card")
             automation_header = Gtk.Box(spacing=12)
@@ -2150,4 +2197,4 @@ else:
         def __init__(self, *_args: Any, **_kwargs: Any) -> None:
             require_gtk()
 
-    DashboardPage = RouteEditorPage = ImageBrowserPage = ImagesPage = ReviewPage = ActivityPage = _Unavailable
+    HomePage = AboutPage = RouteEditorPage = ImageBrowserPage = ImagesPage = ReviewPage = ActivityPage = _Unavailable

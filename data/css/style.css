@@ -92,7 +92,7 @@
   border-radius: 8px;
 }
 
-.action-card { min-width: 280px; min-height: 142px; padding: 19px; }
+.action-card { min-width: 280px; min-height: 96px; padding: 12px; }
 .info-card { padding: 18px; }
 .editor-workspace { margin-top: 4px; }
 .route { min-height: 0; }
@@ -204,11 +204,11 @@ popover listview row:selected label { color: #ffffff; opacity: 1; }
 .drop-active { outline: 2px solid currentColor; outline-offset: -2px; }
 
 .action-bar {
-  min-height: 56px;
-  padding: 8px 24px;
+  min-height: 44px;
+  padding: 4px 18px;
   border-top: 1px solid alpha(currentColor, 0.12);
 }
-.action-bar button { min-height: 40px; padding: 0 20px; }
+.action-bar button { min-height: 36px; padding: 0 12px; }
 .dialog-actions { margin-top: 2px; }
 .dialog-actions button { min-width: 96px; min-height: 38px; padding: 0 18px; }
 .dialog-title { font-size: 18px; font-weight: 700; }
@@ -360,6 +360,5 @@ popover listview row:selected label { color: #ffffff; opacity: 1; }
 .compact .context-panel { min-width: 0; border-left: 0; }
 .compact .route-card,
 .compact .operation-card { min-width: 0; min-height: 0; }
-.short .action-bar { min-height: 48px; padding-top: 5px; padding-bottom: 5px; }
-.short .action-bar button { min-height: 36px; }
+.short .action-bar { min-height: 42px; padding-top: 3px; padding-bottom: 3px; }
 .short .page { padding-top: 14px; padding-bottom: 14px; }

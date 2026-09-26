@@ -99,18 +99,24 @@ class PreflightService:
             JobOperation.SAVEDISK, JobOperation.SAVEPARTS,
         }:
             if not os.access(resolved, os.W_OK): add("repository-not-writable", Severity.ERROR, "Backup repository is not writable", str(resolved))
-            required = sum(source.size for source in spec.sources)
+            logical_size = sum(source.size for source in spec.sources)
             try:
                 free = self.disk_usage(resolved).free
             except (OSError, AttributeError):
                 add("repository-capacity-unavailable", Severity.ERROR,
                     "Backup repository capacity is unavailable", str(resolved))
             else:
-                if required <= 0:
-                    add("source-size-unknown", Severity.WARNING, "Backup source size is unknown")
-                elif free < required:
+                if free <= 0:
                     add("repository-space-insufficient", Severity.ERROR,
-                        "Backup repository has insufficient free space", str(resolved))
+                        "Backup repository has no free space", str(resolved))
+                elif logical_size <= 0:
+                    add("source-size-unknown", Severity.WARNING, "Backup source size is unknown")
+                elif free < logical_size:
+                    # Partclone normally saves used blocks, not the entire disk.
+                    # DD/fallback, compression and metadata make the final size
+                    # unknowable here; never block solely on logical capacity.
+                    add("repository-space-uncertain", Severity.WARNING,
+                        "Free space is smaller than the source device; the backup may run out of space", str(resolved))
         if spec.operation in {JobOperation.SAVEDISK, JobOperation.SAVEPARTS}:
             if spec.image_name and (resolved / spec.image_name).exists(): add("image-exists", Severity.ERROR, "Backup image directory already exists", spec.image_name)
 

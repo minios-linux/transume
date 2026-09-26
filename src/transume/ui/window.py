@@ -9,12 +9,12 @@ from typing import Any, Callable
 
 from .components import ItemPicker, dialog_actions, dialog_shell, present_message
 from .gtk import Gio, GLib, Gtk, Pango, require_gtk, set_accessible_label
-from .pages import ActivityPage, DashboardPage, ImageBrowserPage, ImagesPage, ReviewPage, RestoreMappingPage, RouteEditorPage, StorageLocationChooser
+from .pages import AboutPage, ActivityPage, HomePage, ImageBrowserPage, ImagesPage, ReviewPage, RestoreMappingPage, RouteEditorPage, StorageLocationChooser
 from ..client import AuthorizationError, ImageExplorerClient, SecretValue, run_spec
 from ..activity import LogStore
 from ..controller import build_draft
 from ..draft import JobDraft
-from ..preflight import PreflightService
+from ..preflight import PreflightService, Severity
 from ..images import ImageCandidate
 from ..storage import (ConnectionState, MountOwnership, StorageError, StorageKind,
                        StorageLocation, StorageManager, prepare_smb_subfolder)
@@ -26,18 +26,19 @@ if Gtk is not None:
         __gtype_name__ = "TransumeMainWindow"
 
         NAVIGATION = (
-            ("dashboard", _("About"), "help-about-symbolic"),
+            ("dashboard", _("Home"), "go-home-symbolic"),
             ("backup", _("Backup"), "document-save-symbolic"),
-            ("restore", _("Restore"), "document-revert-symbolic"),
+            ("restore", _("Restoration"), "document-revert-symbolic"),
             ("clone", _("Clone"), "edit-copy-symbolic"),
             ("images", _("Images"), "folder-pictures-symbolic"),
             ("activity", _("Activity"), "view-list-symbolic"),
+            ("about", _("About"), "help-about-symbolic"),
         )
 
         def __init__(self, application: Gtk.Application, model: Any = None, storage_manager: StorageManager | None = None) -> None:
             super().__init__(application=application, title="Transume")
             self.model = model
-            self.set_default_size(1180, 640)
+            self.set_default_size(1024, 580)
             self.set_size_request(800, 520)
             self.set_resizable(True)
             self._layout_mode = ""
@@ -58,6 +59,10 @@ if Gtk is not None:
             self.header_title = Gtk.Label(label="Transume")
             self.header_title.add_css_class("header-title")
             header.set_title_widget(self.header_title)
+            self.home_button = Gtk.Button(icon_name="go-home-symbolic", tooltip_text=_("Home"))
+            set_accessible_label(self.home_button, _("Open Home"))
+            self.home_button.connect("clicked", lambda _button: self.navigate("dashboard"))
+            header.pack_start(self.home_button)
             self.navigation_menu = Gtk.MenuButton(
                 icon_name="open-menu-symbolic", tooltip_text=_("Navigation")
             )
@@ -79,6 +84,8 @@ if Gtk is not None:
                 button.set_child(content)
                 set_accessible_label(button, _("Open {label}").format(label=label))
                 button.connect("clicked", lambda _button, target=name: self._navigate_compact(target))
+                if name == "about":
+                    compact_navigation.append(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
                 compact_navigation.append(button)
                 self.compact_nav_buttons[name] = button
             self.navigation_popover.set_child(compact_navigation)
@@ -120,9 +127,11 @@ if Gtk is not None:
                 button.set_tooltip_text(label)
                 set_accessible_label(button, _("Open {label}").format(label=label))
                 button.connect("clicked", lambda selected, target=name: selected.get_active() and self.navigate(target))
-                self.rail.append(button)
+                if name != "about":
+                    self.rail.append(button)
                 self.nav_buttons[name] = button
             self.rail.append(Gtk.Box(vexpand=True))
+            self.rail.append(self.nav_buttons["about"])
             root.append(self.rail)
 
             self.stack = Gtk.Stack(
@@ -134,11 +143,12 @@ if Gtk is not None:
                 vexpand=True,
             )
             root.append(self.stack)
-            self.dashboard_page = DashboardPage(self.navigate, model)
-            self._add_page("dashboard", self.dashboard_page)
+            self.home_page = HomePage(self.navigate)
+            self._add_page("dashboard", self.home_page)
+            self.about_page = AboutPage(self.navigate, model)
+            self._add_page("about", self.about_page)
             self.route_card_widths = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
             self.context_panel_widths = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
-            self.context_panel_widths.add_widget(self.rail)
             for operation in ("backup", "restore", "clone"):
                 editor = RouteEditorPage(
                      operation, model, self.open_picker, self.choose_storage_location,
@@ -229,9 +239,9 @@ if Gtk is not None:
 
         def _size_changed(self, *_args: Any) -> None:
             width, height = self.get_width(), self.get_height()
-            # Switch before the wide route's natural width becomes a hard floor;
-            # compact reflow then allows the window to continue shrinking to 800px.
-            mode = "compact" if width < 1240 else "wide"
+            # Three route cards, the settings panel and navigation cannot fit
+            # safely below this width, especially with translated labels.
+            mode = "compact" if width < 1700 else "wide"
             if mode != self._layout_mode:
                 if self._layout_mode:
                     self.remove_css_class(self._layout_mode)
@@ -239,7 +249,7 @@ if Gtk is not None:
                 self._layout_mode = mode
                 self.rail.set_visible(mode == "wide")
                 self.navigation_menu.set_visible(mode == "compact")
-                self.dashboard_page.set_compact(mode == "compact")
+                self.about_page.set_compact(mode == "compact")
                 for editor in self.route_editors:
                     editor.set_compact(mode == "compact")
                 self.images_page.set_compact(mode == "compact")
@@ -569,7 +579,9 @@ if Gtk is not None:
                             icon_name="dialog-warning-symbolic",
                         )
 
-                review = ReviewPage(label, display, validation.detail, serial, spec.risk, start, spec)
+                review = ReviewPage(label, display, validation.detail, serial, spec.risk, start, spec,
+                                    warnings=tuple(issue.message for issue in report.issues
+                                                   if issue.severity is Severity.WARNING))
             except (OSError, RuntimeError, ValueError) as error:
                 present_message(
                     self, _("Operation is not ready"), str(error),

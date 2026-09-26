@@ -33,14 +33,29 @@ def test_clone_smaller_target_is_blocked_even_with_resize():
                for issue in report.issues)
 
 
-def test_backup_with_insufficient_repository_space_is_blocked(tmp_path):
+def test_backup_with_less_free_space_than_disk_is_allowed_with_warning(tmp_path):
     spec = PublicJobSpec(
-        "job", JobOperation.SAVEDISK, (device("/dev/sda", 2000),),
+        "job", JobOperation.SAVEDISK, (device("/dev/sda", 500_000_000_000),),
         repository=str(tmp_path), image_name="backup", risk="write-image",
     )
     report = PreflightService(
         binaries=lambda _: "yes",
-        disk_usage=lambda _path: SimpleNamespace(free=1999),
+        disk_usage=lambda _path: SimpleNamespace(free=200_000_000_000),
+    ).check(spec)
+
+    assert report.ok
+    assert any(issue.code == "repository-space-uncertain"
+               and issue.severity is Severity.WARNING for issue in report.issues)
+
+
+def test_backup_with_no_free_repository_space_is_blocked(tmp_path):
+    spec = PublicJobSpec(
+        "job", JobOperation.SAVEDISK, (device("/dev/sda", 500_000_000_000),),
+        repository=str(tmp_path), image_name="backup", risk="write-image",
+    )
+    report = PreflightService(
+        binaries=lambda _: "yes",
+        disk_usage=lambda _path: SimpleNamespace(free=0),
     ).check(spec)
 
     assert any(issue.code == "repository-space-insufficient"
